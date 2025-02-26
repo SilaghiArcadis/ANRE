@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="floating-bar">
+        <span>Gresite: <span id="wrong-count">0</span></span>
+        <span>Corecte: <span id="good-count">0</span></span>
+        <span>Timer: <span id="timer">00:00:00</span></span>
+    </div>
+    
+    <div class="container">
+        <button id="start-btn">Incepe examen ANRE</button>
+        <div id="question-container" class="hidden">
+            <div id="question"></div>
+            <div id="image-container"></div>
+            <div id="answers"></div>
+        </div>
+    </div>
+    <div id="result-container" class="hidden">
+        <h1 id="result-title"></h1> <!-- ADMIS or RESPINS  -->
+        <p>Raspunsuri corecte: <span id="correct-count"></span></p>
+        <p>Raspunsuri gresite: <span id="incorrect-count"></span></p>
+        <p>Timp: <span id="total-time"></span></p>
+        <button id="restart-btn">Restart</button>
+    </div>
+    
+    <script src="questions.json"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
