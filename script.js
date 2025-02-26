@@ -78,22 +78,33 @@ function displayQuestion() {
     });
 }
 
+function nextQuestion() {
+    currentQuestionIndex++;
+    displayQuestion();
+}
 function checkAnswer(selected, correct, answerBtn) {
+    let answersDiv = document.getElementById("answers");
+    let answerButtons = answersDiv.querySelectorAll('.answer');
+
     if (selected === correct) {
         correctCount++;
         document.getElementById("good-count").textContent = correctCount;
         answerBtn.classList.add("correct");
+        setTimeout(nextQuestion, 1000); // 1s delay for correct answers
     } else {
         wrongCount++;
         document.getElementById("wrong-count").textContent = wrongCount;
         answerBtn.classList.add("wrong");
-    }
 
-    setTimeout(() => {
-        answerBtn.classList.remove("correct", "wrong");
-        currentQuestionIndex++;
-        displayQuestion();
-    }, 1000);
+        // Highlight the correct answer
+        answerButtons.forEach((btn, index) => {
+            if (index === correct) {
+                btn.classList.add("correct");
+            }
+        });
+
+        setTimeout(nextQuestion, 3000); // 3s delay for incorrect answers
+    }
 }
 function showResults() {
     clearInterval(timerInterval); // Stop the timer
