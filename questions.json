@@ -1,23 +1,164 @@
 [
-    {
-        "question": "AAR se utilizează în scopul: ",
-        "answers": 
-        [
-            "Limitării curenților de scurtcircuit",
-            "Creșterii continuității în alimentare",
-            "Reducerii pierderilor de energie pe linii"
-        ],
-        "correct": 1
-    },
-    {
-        "question": "Cat face 3+3?",
-        "answers": ["5", "6", "7"],
-        "correct": 1
-    },
-    {
-        "question": "What is the capital of France?",
-        "answers": ["Berlin", "Madrid", "Paris"],
-        "correct": 2
-    }
-    
+  {
+    "question": "În cazul instalațiilor electrice de alimentare a motoarelor electrice, pierderea de tensiune în pornire, față de tensiunea nominală (dacă nu se dispune de alte date specificate de producătorul motorului etc.), trebuie să fie cel mult egală cu:",
+    "answers": [
+      "20%",
+      "25%",
+      "12%"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Pentru motoarele monofazate, protecția contra suprasarcinilor se face:",
+    "answers": [
+      "obligatoriu pe conductorul de fază",
+      "obligatoriu pe conductorul neutru",
+      "opțional pentru motoare mai mici de 1,1 kW"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Alimentarea transformatorului de sonerie sau sonerie de 220/230() V se face:",
+    "answers": [
+      "numai direct din tabloul de distribuție",
+      "dintr-un circuit de iluminat normal",
+      "numai dintr-un circuit de prize"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Secțiunea minimă admisă pentru conductoare de fază din circuite pentru prize monofazate în instalațiile electrice din interiorul clădirilor este de:",
+    "answers": [
+      "2,5 mm² cupru",
+      "1,5 mm² cupru, 2,5 mm² aluminiu",
+      "4 mm² aluminiu"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Secțiunea minimă admisă a conductorului de fază pentru circuitul unui receptor electrocasnic monofazat cu putere de peste 2 kW este de:",
+    "answers": [
+      "2,5 mm² cupru",
+      "1,5 mm² cupru, 2,5 mm² aluminiu",
+      "4 mm² aluminiu"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Pentru circuite monofazate, conductorul neutru (N) va avea:",
+    "answers": [
+      "aceeași secțiune ca și conductorul de fază",
+      "aceeași secțiune ca și conductorul de fază, numai pentru conductoare de cupru",
+      "aceeași secțiune ca și conductorul de fază, numai pentru conductoare de aluminiu"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Pentru un circuit trifazat cu patru conductoare de aluminiu cu secțiunea conductoarelor de fază de 35 mm², conductorul neutru are secțiunea minimă de:",
+    "answers": [
+      "16 mm²",
+      "25 mm²",
+      "35 mm²"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Protecția unui motor trifazat împotriva suprasarcinilor trebuie să fie prevăzută:",
+    "answers": [
+      "pe toate conductoarele de fază și pe conductorul neutru",
+      "pe două conductoare de fază",
+      "pe toate conductoarele de fază"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Cablurile de energie la circuitele care alimentează receptoare de importanță deosebită, se prevăd cu conductoare de cupru atunci când secțiunea conductoarelor (din aluminiu) ar rezulta mai mică de:",
+    "answers": [
+      "10mm²",
+      "16mm²",
+      "6mm²"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Branșamentul electric este partea din instalația de distribuție a energiei electrice cuprinsă între linia electrică și:",
+    "answers": [
+      "firida de branșament",
+      "coloana electrică",
+      "punctul de delimitare între distribuitor și consumator, reprezentat de bornele contorului"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Întreruptoarele, comutatoarele și butoanele de lumină se montează, față de nivelul pardoselii finite, la înălțimea de:",
+    "answers": [
+      "1m de la axul aparatului",
+      "(0,6-1,5) m de la axul aparatului",
+      "1,5 m de la axul aparatului"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Prevederile normativului I 7 – 2011 se aplică la proiectarea, execuția și exploatarea instalațiilor electrice aferente:",
+    "answers": [
+      "clădirilor cu funcțiuni agroindustriale și agrozootehnice",
+      "minelor și carierelor",
+      "depozitelor de materiale pirotehnice și explozive"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Montarea, pe conductoarele de protecție, a unor elemente care pot produce întreruperea circuitului este:",
+    "answers": [
+      "interzisă",
+      "permisă în anumite condiții",
+      "la latitudinea consumatorului"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Alimentarea receptoarelor cu rol de securitate la incendiu trebuie asigurată:",
+    "answers": [
+      "întotdeauna din două surse de alimentare independente",
+      "dintr-o singură sursă de alimentare, în anumite cazuri",
+      "din una sau din două surse, conform opțiunii consumatorului"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Amplasarea aparatelor, echipamentelor și receptoarelor electrice în locuri în care ar putea fi expuse direct la apă, ulei, substanțe corozive, căldură sau șocuri mecanice:",
+    "answers": [
+      "se admite",
+      "se admite condiționat",
+      "este interzisă"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Amplasarea instalațiilor electrice sub conducte sau utilaje pe care poate să apară condens:",
+    "answers": [
+      "se admite întotdeauna",
+      "este total interzisă",
+      "se admite condiționat"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Corpurile de iluminat echipate cu lămpi cu descărcări se prevăd în orice tip de încăpere cu:",
+    "answers": [
+      "grătar protector",
+      "dispozitiv pentru îmbunătățirea factorului de putere",
+      "difuzor"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Dispozitivele pentru suspendarea corpurilor de iluminat (cârlige, bolțuri, dibluri, etc) se aleg astfel încât să suporte fără deformări:",
+    "answers": [
+      "peste 5 kg",
+      "de 5 ori greutatea corpului de iluminat, dar nu mai puțin de 10 kg",
+      "de 5 ori greutatea corpului de iluminat utilizat"
+    ],
+    "correct": 1
+  }
 ]
