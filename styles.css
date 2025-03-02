@@ -110,6 +110,11 @@ body, html {
 .answer:active {
     transform: scale(0.98);
 }
+.answer:disabled {
+    background-color: #cccccc; /* Gray background for disabled buttons */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
 
 /* ====== Correct & Wrong Answers ====== */
 .correct {

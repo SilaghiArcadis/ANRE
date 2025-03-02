@@ -4,6 +4,7 @@ let correctCount = 0;
 let wrongCount = 0;
 let startTime;
 let timerInterval;
+let isAnswering = false; // Flag to track if an answer is being processed
 
 // Fetch questions from JSON
 fetch("questions.json")
@@ -66,25 +67,44 @@ function displayQuestion() {
     // Find the new index of the correct answer after shuffling
     let correctAnswerIndex = shuffledAnswers.indexOf(questionData.answers[questionData.correct]);
 
+    // Create an array to store the answer buttons
+    let answerButtons = [];
+
     // Display the shuffled answers
     shuffledAnswers.forEach((answer, index) => {
         let answerBtn = document.createElement("div");
         answerBtn.classList.add("answer");
         answerBtn.textContent = answer;
+        
+        // Add a custom "answer" button ID for easy identification
+        answerBtn.dataset.index = index;
+        
+        // Add the click event for each answer button
+        answerBtn.onclick = () => checkAnswer(index, correctAnswerIndex, answerBtn, answerButtons);
+        
+        // Store the created button in the answerButtons array
+        answerButtons.push(answerBtn);
 
-        // Check if this answer is the correct one based on its new index
-        answerBtn.onclick = () => checkAnswer(index, correctAnswerIndex, answerBtn);
         answersDiv.appendChild(answerBtn);
     });
 }
 
 function nextQuestion() {
     currentQuestionIndex++;
+    isAnswering = false;  // Allow answering again
     displayQuestion();
 }
-function checkAnswer(selected, correct, answerBtn) {
-    let answersDiv = document.getElementById("answers");
-    let answerButtons = answersDiv.querySelectorAll('.answer');
+
+function checkAnswer(selected, correct, answerBtn, answerButtons) {
+    if (isAnswering) return;  // Prevent multiple answers being clicked
+
+    isAnswering = true;  // Block further answers until this question is processed
+
+    // Disable all answer buttons immediately after selection
+    answerButtons.forEach(btn => {
+        btn.disabled = true;  // Disable all buttons
+        btn.classList.add('disabled'); // Optional: Add a 'disabled' class for styling
+    });
 
     if (selected === correct) {
         correctCount++;
@@ -106,6 +126,7 @@ function checkAnswer(selected, correct, answerBtn) {
         setTimeout(nextQuestion, 3000); // 3s delay for incorrect answers
     }
 }
+
 function showResults() {
     clearInterval(timerInterval); // Stop the timer
 
