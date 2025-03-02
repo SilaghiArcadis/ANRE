@@ -1,208 +1,189 @@
+/* ====== General Page Styling ====== */
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items from the top */
-    background-color: #2c2c2c; /* Dark background for the page */
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a52);
     color: white;
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Allow full-page scrolling */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
 }
 
+/* ====== Quiz Container ====== */
 #quiz-container {
-    text-align: center;
-    background-color: #808080; /* Medium gray background for the quiz container */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 80%;  /* Makes the quiz container width responsive */
-    max-width: 600px; /* Limits the container size */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* Prevent overflow inside the container */
-    margin-top: 100px; /* Add some margin to push the content down */
-    flex-grow: 0;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px;
 }
 
-#start-btn {
-    padding: 20px 40px;
-    font-size: 18px;
+/* ====== Start & Restart Buttons ====== */
+#start-btn, #restart-btn {
+    padding: 15px 50px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #4CAF50; /* Green background */
+    background: linear-gradient(135deg, #4CAF50, #45a049);
     color: white;
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
 }
 
-#start-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
+#start-btn:active, #restart-btn:active {
+    transform: scale(0.95);
 }
 
+/* ====== Floating Bar ====== */
 #floating-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
+    padding: 15px 0;
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 18px;
-    font-weight: bold; /* Make all text in the floating bar bold */
-    z-index: 1000; /* Makes sure the floating bar is always on top */
-}
-
-#question {
-    font-size: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 500px;
-    text-align: left; /* Align the text left */
-    word-wrap: break-word;
-    white-space: normal;
-    margin-top: 100px;
-    z-index: 10;
-    flex-shrink: 0;
-    display: inline-block;
-    text-align: center;
-    font-weight: bold; /* Make the text bold */
-}
-#result-title {
-    font-size: 3rem; /* Make it big and bold */
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
+    z-index: 1000;
 }
 
-
-
-
-#result-container {
-    text-align: center;
-    background-color: #808080; /* Medium gray background */
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    margin-top: 20px;
-    color: white;
-}
-
-#result-container h2 {
+/* ====== Question Styling ====== */
+#question {
     font-size: 24px;
-}
-
-#restart-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    border: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 30px; /* Added padding inside the question box */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: match-parent;
+    width: 95%;
+    max-width: 550px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    margin: 0 auto;
 }
 
-#restart-btn:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-.hidden {
-    display: none;
-}
-
-.answer {
-    display: block;
-    padding: 15px;
-    margin: 10px auto;
-    width: 80%;
-    background-color: #444;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 18px; /* Keep the text size consistent */
-    max-width: 100%; /* Prevent answers from expanding too much */
-    text-align: left; /* Align text to the left to keep answers readable */
-    white-space: normal; /* Prevent text from being forced into a single line */
-    min-height: 50px; /* Set a minimum height for answers to keep them consistent */
-    overflow-wrap: break-word; /* Allow answers to break if they are too long */
-}
-
-.answer:hover {
-    background-color: #666;
-}
-
-.correct {
-    background-color: #4CAF50 !important;
-}
-
-.wrong {
-    background-color: #FF4C4C !important;
-}
-
-/* Custom styling for the good and wrong counters */
-#good-count {
-    color: #4CAF50; /* Green color for good answers */
-    font-weight: bold; /* Make it bold */
-}
-
-#wrong-count {
-    color: #FF4C4C; /* Red color for wrong answers */
-    font-weight: bold; /* Make it bold */
-}
-
-/* Allow answers to expand downwards without breaking the layout */
+/* ====== Answers Styling ====== */
 #answers {
-    overflow-y: auto; /* Scrolls the answers if they exceed container height */
-    flex-grow: 1; /* Allows the answers section to take up remaining space */
-}
-
-/* Full page scrollable behavior */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 100vh;
-    overflow: auto; /* Enable scrolling on the body */
-}
-
-/* Ensures quiz container scrolls independently */
-#quiz-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    height: auto;
-    overflow: visible; /* Allow scroll within the container */
-    margin-top: 100px; /* Space for floating bar */
+    gap: 20px; /* More space between answers */
+    width: 95%;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
+.answer {
+    padding: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: left;
+    color: white;
+    word-wrap: break-word;
+    box-sizing: border-box; /* Ensure padding is counted within the width */
+    min-height: 60px; /* Keep answers consistent in size */
+    transition: background-color 0.3s ease;
+}
 
-/* Image container (outside of the answer box) */
+.answer:active {
+    transform: scale(0.98);
+}
+
+/* ====== Correct & Wrong Answers ====== */
+.correct {
+    background: linear-gradient(135deg, #4CAF50, #45a049) !important;
+    color: white !important;
+}
+
+.wrong {
+    background: linear-gradient(135deg, #FF4C4C, #D32F2F) !important;
+    color: white !important;
+}
+
+/* ====== Result Container ====== */
+#result-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#result-title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+#result-title.admis {
+    color: #4CAF50;
+}
+
+#result-title.respins {
+    color: #FF4C4C;
+}
+
+/* ====== Counters ====== */
+#good-count {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+#wrong-count {
+    color: #FF4C4C;
+    font-weight: bold;
+}
+
+/* ====== Timer ====== */
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ====== Image Container ====== */
 #image-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;  /* Space between image and answers */
+    margin-bottom: 20px;
     width: 100%;
 }
 
 #image-container img {
     max-width: 100%;
-    max-height: 300px;  /* Limit image height */
-    object-fit: contain;  /* Ensure the image fits well */
+    max-height: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Answer container (scrollable) */
-#answers {
-    overflow-y: auto;  /* Enables scrolling for answers */
-    flex-grow: 1;  /* Allow answers to take up remaining space */
-    max-height: 60vh;;  /* Limit the height of the answers container */
+/* ====== Utility Classes ====== */
+.hidden {
+    display: none;
 }
