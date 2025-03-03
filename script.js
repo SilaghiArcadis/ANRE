@@ -132,7 +132,7 @@ function showResults() {
 
     document.getElementById("question-container").classList.add("hidden");
 
-    let isAdmis = correctCount >= 4;
+    let isAdmis = correctCount >= 18;
     let resultMessage = isAdmis ? "ADMIS" : "RESPINS";
     let resultTitle = document.getElementById("result-title");
     resultTitle.textContent = resultMessage;
