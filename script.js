@@ -11,7 +11,7 @@ let wrongAnswers = []; // To store wrong answers
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        questions = shuffleArray(data).slice(0, 5); // Pick 5 random questions
+        questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
     })
     .catch(error => console.error('Error fetching questions:', error));
 
