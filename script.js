@@ -11,7 +11,7 @@ let wrongAnswers = []; // To store wrong answers
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        questions = shuffleArray(data).slice(0, 5); // Pick 25 random questions
+        questions = shuffleArray(data).slice(0, 5); // Pick 5 random questions
     })
     .catch(error => console.error('Error fetching questions:', error));
 
@@ -60,21 +60,22 @@ function displayQuestion() {
         imageContainer.appendChild(img);
     }
 
+    // Shuffle the answers
     let shuffledAnswers = shuffleArray([...questionData.answers]);
-    let correctAnswerIndex = shuffledAnswers.indexOf(questionData.answers[questionData.correct]);
+
+    // Store the value of the correct answer
+    let correctAnswerValue = questionData.answers[questionData.correct];
 
     let answerButtons = [];
-    shuffledAnswers.forEach((answer, index) => {
+    shuffledAnswers.forEach(answer => {
         let answerBtn = document.createElement("div");
         answerBtn.classList.add("answer");
         answerBtn.textContent = answer;
         
-        answerBtn.dataset.index = index;
-        
-        answerBtn.onclick = () => checkAnswer(index, correctAnswerIndex, answerBtn, answerButtons);
+        // Pass correctAnswerValue into checkAnswer
+        answerBtn.onclick = () => checkAnswer(answer, correctAnswerValue, answerBtn, answerButtons, questionData);
         
         answerButtons.push(answerBtn);
-
         answersDiv.appendChild(answerBtn);
     });
 }
@@ -85,17 +86,20 @@ function nextQuestion() {
     displayQuestion();
 }
 
-function checkAnswer(selected, correct, answerBtn, answerButtons) {
+// Check the answer selected by the user
+function checkAnswer(selectedValue, correctValue, answerBtn, answerButtons, questionData) {
     if (isAnswering) return;
 
     isAnswering = true;
 
+    // Disable all buttons and add disabled class
     answerButtons.forEach(btn => {
         btn.disabled = true;
         btn.classList.add('disabled');
     });
 
-    if (selected === correct) {
+    // If the answer is correct
+    if (selectedValue === correctValue) {
         correctCount++;
         document.getElementById("good-count").textContent = correctCount;
         answerBtn.classList.add("correct");
@@ -105,20 +109,21 @@ function checkAnswer(selected, correct, answerBtn, answerButtons) {
         document.getElementById("wrong-count").textContent = wrongCount;
         answerBtn.classList.add("wrong");
 
-        answerButtons.forEach((btn, index) => {
-            if (index === correct) {
+        // Highlight the correct answer
+        answerButtons.forEach(btn => {
+            if (btn.textContent === correctValue) {
                 btn.classList.add("correct");
             }
         });
 
-        // Store the wrong answer
+        // Store the wrong answer with the selected and correct answer values
         wrongAnswers.push({
-            question: questions[currentQuestionIndex],
-            selectedAnswer: selected,
-            correctAnswer: correct
+            question: questionData,  // Store the entire question object
+            selectedAnswer: selectedValue,  // Store the selected answer value
+            correctAnswer: correctValue  // Store the correct answer value
         });
 
-        setTimeout(nextQuestion, 3000);
+        setTimeout(nextQuestion, 3000);  // Move to the next question after 3 seconds
     }
 }
 
@@ -127,7 +132,7 @@ function showResults() {
 
     document.getElementById("question-container").classList.add("hidden");
 
-    let isAdmis = correctCount >= 18;
+    let isAdmis = correctCount >= 4;
     let resultMessage = isAdmis ? "ADMIS" : "RESPINS";
     let resultTitle = document.getElementById("result-title");
     resultTitle.textContent = resultMessage;
@@ -138,10 +143,15 @@ function showResults() {
     let totalTime = document.getElementById("timer").textContent;
     document.getElementById("total-time").textContent = totalTime;
 
-    // Show result container and the "Review Answers" button
+    // Show result container
     document.getElementById("result-container").classList.remove("hidden");
-    document.getElementById("review-btn").classList.remove("hidden"); // Show the review button
+
+    // Show the "Review Answers" button only if there are wrong answers
+    if (wrongAnswers.length > 0) {
+        document.getElementById("review-btn").classList.remove("hidden"); // Show the review button
+    }
 }
+
 
 // Review Wrong Answers
 document.getElementById("review-btn").addEventListener("click", function() {
@@ -161,26 +171,32 @@ document.getElementById("restart-review-btn").addEventListener("click", restartQ
 // Review Buttons Navigation (Next, Previous)
 let currentReviewIndex = 0;
 
+// Display the review for the wrong answers
 function displayReviewAnswer(index) {
     let reviewDiv = document.getElementById("review-answer");
-    let answerData = wrongAnswers[index];
+    let answerData = wrongAnswers[index];  // Get the current wrong answer data
 
+    // Show the question, selected answer, and correct answer
     reviewDiv.innerHTML = `
-        <p><strong></strong> ${answerData.question.question}</p>
-        <p><strong>Raspunsul tau:</strong> <span class="wrong">${answerData.question.answers[answerData.selectedAnswer]}</span></p>
-        <p><strong>Raspuns corect:</strong> <span class="correct">${answerData.question.answers[answerData.correctAnswer]}</span></p>
+        <p><strong>${answerData.question.question}</strong></p>
+        <p><strong>Raspunsul tau:</strong> <span class="wrong">${answerData.selectedAnswer}</span></p>
+        <p><strong>Raspuns corect:</strong> <span class="correct">${answerData.correctAnswer}</span></p>
     `;
 
+    // Update the current review index
     currentReviewIndex = index;
     updateNavigationButtons();
 }
 
+// Update the navigation buttons (Next, Previous)
 function updateNavigationButtons() {
+    // Disable the Previous button if we're at the start
     document.getElementById("previous-btn").disabled = currentReviewIndex === 0;
+    // Disable the Next button if we're at the last wrong answer
     document.getElementById("next-btn").disabled = currentReviewIndex === wrongAnswers.length - 1;
 }
 
-// Navigation buttons
+// Event listeners for the Previous and Next buttons
 document.getElementById("previous-btn")?.addEventListener("click", function() {
     if (currentReviewIndex > 0) {
         displayReviewAnswer(currentReviewIndex - 1);
