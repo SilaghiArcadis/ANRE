@@ -27,8 +27,24 @@
         <p>Raspunsuri gresite: <span id="incorrect-count"></span></p>
         <p>Timp: <span id="total-time"></span></p>
         <button id="restart-btn">Restart</button>
+        <button id="review-btn" class="hidden">Raspunsuri gresite</button> <!-- Review button -->
     </div>
-    
+<!-- Review Container -->
+<div id="review-container" class="hidden">
+    <div id="quiz-content">
+        <!-- Content: Question, Answers, etc. -->
+        <div id="review-answer"></div>
+    </div>
+
+    <!-- Buttons container fixed at the bottom -->
+    <div id="nav-buttons">
+        <button id="previous-btn">Previous</button>
+        <button id="next-btn">Next</button>
+        <button id="restart-review-btn">Restart Quiz</button>
+    </div>
+</div>
+
+        
     <script src="questions.json"></script>
     <script src="script.js" defer></script>
 </body>

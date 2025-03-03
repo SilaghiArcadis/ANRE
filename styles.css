@@ -192,3 +192,106 @@ body, html {
 .hidden {
     display: none;
 }
+#review-answer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 30px; /* Added padding inside the box */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 95%;
+    max-width: 550px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    margin: 0 auto; /* Center it horizontally */
+}
+/* ====== Button Container for Review page ====== */
+#nav-buttons {
+    position: absolute; /* Absolute positioning to stick to the bottom */
+    bottom: 20px; /* Space from the bottom of the screen */
+    left: 50%; /* Center the buttons horizontally */
+    transform: translateX(-50%); /* Adjust horizontal position to truly center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+    width: 100%;
+    max-width: 600px; /* Maximum width for the buttons container */
+    z-index: 10; /* Ensure buttons are above the content */
+}
+
+/* ====== Buttons Styling ====== */
+#previous-btn,
+#next-btn,
+#restart-review-btn,
+#review-btn,
+#restart-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: auto;
+    min-width: 200px; /* Ensure buttons don't shrink */
+    text-align: center;
+    touch-action: manipulation; /* Ensures smooth touch responsiveness */
+}
+
+/* ====== Button Colors ====== */
+#previous-btn {
+    background: linear-gradient(135deg, #FF8C00, #FF6347); /* Orange-red */
+}
+
+#next-btn {
+    background: linear-gradient(135deg, #1E90FF, #00BFFF); /* Blue */
+}
+
+#review-btn {
+    /* Green gradient */
+    background: linear-gradient(135deg, #FF4C4C, #D32F2F);
+}
+
+#restart-review-btn,
+#restart-btn {
+    background: linear-gradient(135deg, #4CAF50, #45a049); /* Red */
+}
+
+/* ====== Click Feedback ====== */
+#previous-btn:active,
+#next-btn:active,
+#restart-review-btn:active,
+#restart-btn:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+/* ====== Disabled Buttons ====== */
+#previous-btn:disabled,
+#next-btn:disabled {
+    background: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+/* ====== Mobile Responsiveness ====== */
+@media (max-width: 500px) {
+    #nav-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 15px;
+    }
+
+    #previous-btn,
+    #next-btn,
+    #restart-review-btn,
+    #restart-btn {
+        width: 100%; /* Ensure buttons fill the available width */
+        padding: 15px 0; /* Adjust padding for full-width buttons */
+    }
+}

@@ -4,15 +4,16 @@ let correctCount = 0;
 let wrongCount = 0;
 let startTime;
 let timerInterval;
-let isAnswering = false; // Flag to track if an answer is being processed
+let isAnswering = false;
+let wrongAnswers = []; // To store wrong answers
 
 // Fetch questions from JSON
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+        questions = shuffleArray(data).slice(0, 1); // Pick 25 random questions
     })
-    .catch(error => console.error('Error fetching questions:', error)); // Added error handling for fetch
+    .catch(error => console.error('Error fetching questions:', error));
 
 document.getElementById("start-btn").addEventListener("click", startQuiz);
 
@@ -39,50 +40,39 @@ function startQuiz() {
 
 function displayQuestion() {
     if (currentQuestionIndex >= questions.length) {
-        showResults(); // Show the results if all questions are answered
+        showResults();
         return;
     }
 
     let questionData = questions[currentQuestionIndex];
     let questionDiv = document.getElementById("question");
     let answersDiv = document.getElementById("answers");
-    let imageContainer = document.getElementById("image-container"); // Image container outside the answer box
+    let imageContainer = document.getElementById("image-container");
 
-    // Clear previous content
     questionDiv.innerHTML = `<strong>${currentQuestionIndex + 1}. </strong>${questionData.question}`;
     answersDiv.innerHTML = "";
-    imageContainer.innerHTML = ""; // Clear any previously displayed image
+    imageContainer.innerHTML = "";
 
-    // If the question has an associated image, display it in the image container
     if (questionData.image) {
         let img = document.createElement("img");
         img.src = questionData.image;
         img.style.maxWidth = "100%";
-        imageContainer.appendChild(img); // Append image outside of the answer box
+        imageContainer.appendChild(img);
     }
 
-    // Shuffle answers for randomness
     let shuffledAnswers = shuffleArray([...questionData.answers]);
-
-    // Find the new index of the correct answer after shuffling
     let correctAnswerIndex = shuffledAnswers.indexOf(questionData.answers[questionData.correct]);
 
-    // Create an array to store the answer buttons
     let answerButtons = [];
-
-    // Display the shuffled answers
     shuffledAnswers.forEach((answer, index) => {
         let answerBtn = document.createElement("div");
         answerBtn.classList.add("answer");
         answerBtn.textContent = answer;
         
-        // Add a custom "answer" button ID for easy identification
         answerBtn.dataset.index = index;
         
-        // Add the click event for each answer button
         answerBtn.onclick = () => checkAnswer(index, correctAnswerIndex, answerBtn, answerButtons);
         
-        // Store the created button in the answerButtons array
         answerButtons.push(answerBtn);
 
         answersDiv.appendChild(answerBtn);
@@ -91,84 +81,116 @@ function displayQuestion() {
 
 function nextQuestion() {
     currentQuestionIndex++;
-    isAnswering = false;  // Allow answering again
+    isAnswering = false;
     displayQuestion();
 }
 
 function checkAnswer(selected, correct, answerBtn, answerButtons) {
-    if (isAnswering) return;  // Prevent multiple answers being clicked
+    if (isAnswering) return;
 
-    isAnswering = true;  // Block further answers until this question is processed
+    isAnswering = true;
 
-    // Disable all answer buttons immediately after selection
     answerButtons.forEach(btn => {
-        btn.disabled = true;  // Disable all buttons
-        btn.classList.add('disabled'); // Optional: Add a 'disabled' class for styling
+        btn.disabled = true;
+        btn.classList.add('disabled');
     });
 
     if (selected === correct) {
         correctCount++;
         document.getElementById("good-count").textContent = correctCount;
         answerBtn.classList.add("correct");
-        setTimeout(nextQuestion, 1000); // 1s delay for correct answers
+        setTimeout(nextQuestion, 1000);
     } else {
         wrongCount++;
         document.getElementById("wrong-count").textContent = wrongCount;
         answerBtn.classList.add("wrong");
 
-        // Highlight the correct answer
         answerButtons.forEach((btn, index) => {
             if (index === correct) {
                 btn.classList.add("correct");
             }
         });
 
-        setTimeout(nextQuestion, 3000); // 3s delay for incorrect answers
+        // Store the wrong answer
+        wrongAnswers.push({
+            question: questions[currentQuestionIndex],
+            selectedAnswer: selected,
+            correctAnswer: correct
+        });
+
+        setTimeout(nextQuestion, 3000);
     }
 }
 
 function showResults() {
-    clearInterval(timerInterval); // Stop the timer
+    clearInterval(timerInterval);
 
-    // Hide the quiz container
     document.getElementById("question-container").classList.add("hidden");
 
-    // Determine if "ADMIS" or "RESPINS"
     let isAdmis = correctCount >= 18;
     let resultMessage = isAdmis ? "ADMIS" : "RESPINS";
-
-    // Set the result title and color
     let resultTitle = document.getElementById("result-title");
     resultTitle.textContent = resultMessage;
     resultTitle.style.color = isAdmis ? "#4CAF50" : "#FF4C4C";
 
-    // Update the counts and total time
     document.getElementById("correct-count").textContent = correctCount;
     document.getElementById("incorrect-count").textContent = wrongCount;
     let totalTime = document.getElementById("timer").textContent;
     document.getElementById("total-time").textContent = totalTime;
 
-    // Show the result container
+    // Show result container and the "Review Answers" button
     document.getElementById("result-container").classList.remove("hidden");
+    document.getElementById("review-btn").classList.remove("hidden"); // Show the review button
 }
 
-
-// Restart the quiz
-document.getElementById("restart-btn").addEventListener("click", function() {
-    // Reset counters and timer
-    correctCount = 0;
-    wrongCount = 0;
-    currentQuestionIndex = 0;
-    document.getElementById("good-count").textContent = 0;
-    document.getElementById("wrong-count").textContent = 0;
-    document.getElementById("timer").textContent = "00:00:00";
-
-    // Hide result container and show the quiz container
+// Review Wrong Answers
+document.getElementById("review-btn").addEventListener("click", function() {
     document.getElementById("result-container").classList.add("hidden");
-    document.getElementById("question-container").classList.remove("hidden");
+    document.getElementById("review-container").classList.remove("hidden");
+    displayReviewAnswer(0); // Show first wrong answer
+});
 
-    // Start a new quiz
-    startQuiz();
+// Restart the quiz by reloading the page
+function restartQuiz() {
+    location.reload(); // Refreshes the entire page
+}
+
+document.getElementById("restart-btn").addEventListener("click", restartQuiz); // Result page restart
+document.getElementById("restart-review-btn").addEventListener("click", restartQuiz); // Review page restart
+
+// Review Buttons Navigation (Next, Previous)
+let currentReviewIndex = 0;
+
+function displayReviewAnswer(index) {
+    let reviewDiv = document.getElementById("review-answer");
+    let answerData = wrongAnswers[index];
+
+    reviewDiv.innerHTML = `
+        <p><strong>Intrebare:</strong> ${answerData.question.question}</p>
+        <p><strong>Raspunsul tau:</strong> <span class="wrong">${answerData.question.answers[answerData.selectedAnswer]}</span></p>
+        <p><strong>Raspuns corect:</strong> <span class="correct">${answerData.question.answers[answerData.correctAnswer]}</span></p>
+    `;
+
+    currentReviewIndex = index;
+    updateNavigationButtons();
+}
+
+function updateNavigationButtons() {
+    document.getElementById("previous-btn").disabled = currentReviewIndex === 0;
+    document.getElementById("next-btn").disabled = currentReviewIndex === wrongAnswers.length - 1;
+}
+
+// Navigation buttons
+document.getElementById("previous-btn")?.addEventListener("click", function() {
+    if (currentReviewIndex > 0) {
+        displayReviewAnswer(currentReviewIndex - 1);
+    }
+});
+
+document.getElementById("next-btn")?.addEventListener("click", function() {
+    if (currentReviewIndex < wrongAnswers.length - 1) {
+        displayReviewAnswer(currentReviewIndex + 1);
+    }
 });
 
 // Utility: Shuffle array function
