@@ -192,11 +192,12 @@ body, html {
 .hidden {
     display: none;
 }
+/* ====== Review Answer Container ====== */
 #review-answer {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 30px;
-    padding: 30px; /* Added padding inside the box */
+    padding: 20px; /* Added padding inside the box */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -205,7 +206,20 @@ body, html {
     max-width: 550px;
     box-sizing: border-box; /* Ensure padding doesn't cause overflow */
     margin: 0 auto; /* Center it horizontally */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    max-height: 60vh; /* Limit the height to a percentage of the screen height */
+    position: absolute; /* Fix position on screen */
+    top: 80px; /* Place it under the floating menu */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust positioning to truly center */
 }
+
+/* ====== Review Answer Text ====== */
+#review-answer p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 /* ====== Button Container for Review page ====== */
 #nav-buttons {
     position: absolute; /* Absolute positioning to stick to the bottom */

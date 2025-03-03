@@ -166,7 +166,7 @@ function displayReviewAnswer(index) {
     let answerData = wrongAnswers[index];
 
     reviewDiv.innerHTML = `
-        <p><strong>Intrebare:</strong> ${answerData.question.question}</p>
+        <p><strong></strong> ${answerData.question.question}</p>
         <p><strong>Raspunsul tau:</strong> <span class="wrong">${answerData.question.answers[answerData.selectedAnswer]}</span></p>
         <p><strong>Raspuns corect:</strong> <span class="correct">${answerData.question.answers[answerData.correctAnswer]}</span></p>
     `;
