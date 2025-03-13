@@ -11,7 +11,7 @@ let wrongAnswers = []; // To store wrong answers
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        questions = shuffleArray(data).slice(0, 5); // Pick 5 random questions
+        questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
     })
     .catch(error => console.error('Error fetching questions:', error));
 
@@ -60,26 +60,42 @@ function displayQuestion() {
         imageContainer.appendChild(img);
     }
 
-    // Shuffle the answers
     let shuffledAnswers = shuffleArray([...questionData.answers]);
-
-    // Store the value of the correct answer
     let correctAnswerValue = questionData.answers[questionData.correct];
 
     let answerButtons = [];
     shuffledAnswers.forEach(answer => {
         let answerBtn = document.createElement("div");
         answerBtn.classList.add("answer");
-        answerBtn.textContent = answer;
-        
-        // Pass correctAnswerValue into checkAnswer
+
+        if (typeof answer === "object" && (answer.image || answer.text)) {
+            // Răspuns cu imagine și/sau text
+            if (answer.image) {
+                let img = document.createElement("img");
+                img.src = answer.image;
+                img.alt = answer.text || "Answer Image";
+                img.classList.add("answer-image");
+                answerBtn.appendChild(img);
+            }
+            if (answer.text) {
+                let p = document.createElement("p");
+                p.textContent = answer.text;
+                answerBtn.appendChild(p);
+            }
+        } else {
+            // Răspuns text simplu
+            let p = document.createElement("p");
+            p.textContent = answer;
+            answerBtn.appendChild(p);
+        }
+
         answerBtn.onclick = () => checkAnswer(answer, correctAnswerValue, answerBtn, answerButtons, questionData);
-        
         answerButtons.push(answerBtn);
         answersDiv.appendChild(answerBtn);
     });
+    let questionContainer = document.getElementById("question-container");
+    questionContainer.scrollTo({ top: 0, behavior: "smooth" }); // smooth scrolling effect
 }
-
 function nextQuestion() {
     currentQuestionIndex++;
     isAnswering = false;
@@ -92,47 +108,87 @@ function checkAnswer(selectedValue, correctValue, answerBtn, answerButtons, ques
 
     isAnswering = true;
 
-    // Disable all buttons and add disabled class
+    // Dezactivează toate butoanele
     answerButtons.forEach(btn => {
         btn.disabled = true;
         btn.classList.add('disabled');
     });
 
-    // If the answer is correct
-    if (selectedValue === correctValue) {
+    let isCorrect = JSON.stringify(selectedValue) === JSON.stringify(correctValue);
+
+    console.log("Selected Value:", selectedValue);
+    console.log("Correct Value:", correctValue);
+
+    if (isCorrect) {
         correctCount++;
         document.getElementById("good-count").textContent = correctCount;
-        answerBtn.classList.add("correct");
+        answerBtn.classList.add("correct"); // Evidențiază răspunsul selectat ca fiind corect
         setTimeout(nextQuestion, 1000);
     } else {
         wrongCount++;
         document.getElementById("wrong-count").textContent = wrongCount;
-        answerBtn.classList.add("wrong");
+        answerBtn.classList.add("wrong"); // Evidențiază răspunsul greșit
 
-        // Highlight the correct answer
+        // Evidențiază răspunsul corect
         answerButtons.forEach(btn => {
-            if (btn.textContent === correctValue) {
-                btn.classList.add("correct");
+            let btnText = null;
+            let btnImage = null;
+
+            // Verifică dacă butonul conține text (căutând tag-ul <p>)
+            const textElement = btn.querySelector("p");
+            if (textElement) {
+                btnText = textElement.textContent.trim();
+            }
+
+            // Verifică dacă butonul conține o imagine (căutând tag-ul <img>)
+            const imageElement = btn.querySelector("img");
+            if (imageElement) {
+                btnImage = imageElement.src;
+            }
+
+            console.log("Button Text:", btnText);
+            console.log("Button Image:", btnImage);
+
+            // Determină valorile corecte pentru text și imagine
+            let correctText = typeof correctValue === "object" ? correctValue.text : correctValue;
+            let correctImage = typeof correctValue === "object" && correctValue.image ? correctValue.image : null;
+
+            console.log("Correct Text:", correctText);
+            console.log("Correct Image:", correctImage);
+
+            // Verifică dacă butonul se potrivește cu răspunsul corect
+            let isTextMatch = btnText && btnText === correctText;
+            let isImageMatch = btnImage && btnImage.includes(correctImage);
+
+            // Evidențiază doar răspunsul corect
+            if (typeof correctValue === "object") { // Răspunsul corect este un obiect
+                if (isTextMatch || isImageMatch) {
+                    btn.classList.add("correct");
+                }
+            } else { // Răspunsul corect este un șir de text
+                if (btnText === correctValue) {
+                    btn.classList.add("correct");
+                }
             }
         });
 
-        // Store the wrong answer with the selected and correct answer values
+        // Stochează răspunsul greșit pentru revizuire
         wrongAnswers.push({
-            question: questionData,  // Store the entire question object
-            selectedAnswer: selectedValue,  // Store the selected answer value
-            correctAnswer: correctValue  // Store the correct answer value
+            question: questionData,
+            selectedAnswer: selectedValue,
+            correctAnswer: correctValue
         });
 
-        setTimeout(nextQuestion, 3000);  // Move to the next question after 3 seconds
+        setTimeout(nextQuestion, 3000); // Întârziere pentru a afișa răspunsul corect
     }
 }
-
 function showResults() {
     clearInterval(timerInterval);
 
     document.getElementById("question-container").classList.add("hidden");
+    document.getElementById("floating-bar").classList.add("hidden"); // Hides the floating bar
 
-    let isAdmis = correctCount >= 4;
+    let isAdmis = correctCount >= 18;
     let resultMessage = isAdmis ? "ADMIS" : "RESPINS";
     let resultTitle = document.getElementById("result-title");
     resultTitle.textContent = resultMessage;
@@ -148,10 +204,9 @@ function showResults() {
 
     // Show the "Review Answers" button only if there are wrong answers
     if (wrongAnswers.length > 0) {
-        document.getElementById("review-btn").classList.remove("hidden"); // Show the review button
+        document.getElementById("review-btn").classList.remove("hidden");
     }
 }
-
 
 // Review Wrong Answers
 document.getElementById("review-btn").addEventListener("click", function() {
@@ -174,19 +229,51 @@ let currentReviewIndex = 0;
 // Display the review for the wrong answers
 function displayReviewAnswer(index) {
     let reviewDiv = document.getElementById("review-answer");
-    let answerData = wrongAnswers[index];  // Get the current wrong answer data
+    let answerData = wrongAnswers[index]; // Get the current wrong answer data
 
-    // Show the question, selected answer, and correct answer
+    // Helper to format answers (supports both objects and plain text answers)
+    const formatAnswer = (answer, isCorrect, questionImage) => {
+        let text = typeof answer === "object" ? answer.text : answer; // Get text whether it's an object or string
+        let image = typeof answer === "object" && answer.image ? `<img src="${answer.image}" alt="${text}" class="answer-image">` : "";
+        let highlightClass = isCorrect ? "correct" : "wrong";
+
+        return `
+            <div class="answer-section">
+                ${image}
+                <div class="answer-text ${highlightClass}">${text}</div>
+            </div>
+        `;
+    };
+
+    // Get the question image (if any)
+    let questionImage = answerData.question.image;
+
+    // Display question and answers with correct colors
     reviewDiv.innerHTML = `
-        <p><strong>${answerData.question.question}</strong></p>
-        <p><strong>Raspunsul tau:</strong> <span class="wrong">${answerData.selectedAnswer}</span></p>
-        <p><strong>Raspuns corect:</strong> <span class="correct">${answerData.correctAnswer}</span></p>
+        <h3>${answerData.question.question}</h3>
+        ${questionImage ? `<img src="${questionImage}" alt="Question Image" class="answer-image">` : ''}
+
+        <div class="answer-block">
+            <p><strong>Raspunsul tau:</strong></p>
+            ${formatAnswer(answerData.selectedAnswer, false, questionImage)}
+        </div>
+
+        <div class="answer-block">
+            <p><strong>Raspuns corect:</strong></p>
+            ${formatAnswer(answerData.correctAnswer, true, questionImage)}
+        </div>
     `;
 
-    // Update the current review index
+     // Reset scroll to top
+     reviewDiv.scrollTo({ top: 0, behavior: "smooth" });
+
     currentReviewIndex = index;
     updateNavigationButtons();
 }
+
+
+
+
 
 // Update the navigation buttons (Next, Previous)
 function updateNavigationButtons() {

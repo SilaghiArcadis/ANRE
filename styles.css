@@ -63,6 +63,12 @@ body, html {
     font-size: 18px;
     font-weight: bold;
     z-index: 1000;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 /* ====== Question Styling ====== */
@@ -70,15 +76,21 @@ body, html {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
-    padding: 30px; /* Added padding inside the question box */
+    padding: 30px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: match-parent;
+    text-align: center;  /* Ensures the text is centered */
     width: 95%;
     max-width: 550px;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-    margin: 0 auto;
+    box-sizing: border-box;
+    margin: 0 auto;  /* Centers the question container */
+}
+#question-container {
+    overflow-y: auto;  /* Enable vertical scrolling */
+    max-height: calc(100vh - 120px); /* Adjust this value depending on your layout (e.g., space for the floating bar) */
+    
+    box-sizing: border-box;
 }
 
 /* ====== Answers Styling ====== */
@@ -86,10 +98,10 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* More space between answers */
+    gap: 20px;
     width: 95%;
     max-width: 550px;
-    margin: 0 auto;
+    margin: 0 auto;  /* Centers the answers container */
 }
 
 .answer {
@@ -98,23 +110,32 @@ body, html {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 20px;  /* Increased font size by one */
     text-align: left;
     color: white;
     word-wrap: break-word;
-    box-sizing: border-box; /* Ensure padding is counted within the width */
-    min-height: 60px; /* Keep answers consistent in size */
+    box-sizing: border-box;
+    min-height: 60px;
     transition: background-color 0.3s ease;
+    display: flex;            /* Enables flexbox for centering content */
+    flex-direction: column;   /* Stacks the content vertically */
+    align-items: center;      /* Centers the content horizontally */
+    justify-content: center;  /* Centers the content vertically */
+}
+.answer p {
+    font-size: 20px;  /* Increase text size by one step */
+    color: white;     /* Ensure the text remains white */
+    margin: 0;        /* Remove default margin */
+    text-align: center; /* Center-align the text inside the answer block */
 }
 
 .answer:active {
     transform: scale(0.98);
 }
 .answer:disabled {
-    background-color: #cccccc; /* Gray background for disabled buttons */
-    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+    background-color: #cccccc;
+    cursor: not-allowed;
 }
-
 
 /* ====== Correct & Wrong Answers ====== */
 .correct {
@@ -139,6 +160,14 @@ body, html {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
+/* General text styling */
+#result-container p {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
 
 #result-title {
     font-size: 4rem;
@@ -146,6 +175,7 @@ body, html {
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+
 
 #result-title.admis {
     color: #4CAF50;
@@ -165,6 +195,24 @@ body, html {
     color: #FF4C4C;
     font-weight: bold;
 }
+/* Color differentiation */
+#correct-count {
+
+    color:  #73ff73;
+    text-shadow: 0 0 5px #2bff00, 0 0 30px #2bff00; /* Bright green glow */
+}
+
+#incorrect-count {
+
+    color:  #ff1100;
+    text-shadow: 0 0 5px #ff1100, 0 0 30px #ff1100; /* Red glow */
+}
+
+#total-time {
+
+    color:  white;
+    text-shadow: 0 0 5px white, 0 0 30px white; /* Blue glow */
+}
 
 /* ====== Timer ====== */
 #timer {
@@ -173,66 +221,145 @@ body, html {
     color: #fff;
 }
 
-/* ====== Image Container ====== */
+ /* ====== Image Container ====== */
 #image-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;  /* Center the image vertically and horizontally */
+    
     width: 100%;
+    text-align: center;  /* Ensures the image and text are centered */
+    padding: 10px;  /* Optional: add some space around the image */
+    box-sizing: border-box; /* Make sure padding doesn't affect width calculation */
 }
 
+/* ====== Image Styling ====== */
 #image-container img {
-    max-width: 100%;
-    max-height: 300px;
+    width: 100%; /* Make the image fill the container's width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    max-height: 250px; /* Limit the height, but it can be smaller depending on aspect ratio */
+    object-fit: contain; /* Ensure the image is fully visible within the container */
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    
 }
+
 
 /* ====== Utility Classes ====== */
 .hidden {
     display: none;
 }
+
 /* ====== Review Answer Container ====== */
 #review-answer {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 30px;
-    padding: 20px; /* Added padding inside the box */
+    padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
     width: 95%;
     max-width: 550px;
-    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
-    margin: 0 auto; /* Center it horizontally */
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-    max-height: 60vh; /* Limit the height to a percentage of the screen height */
-    position: absolute; /* Fix position on screen */
-    top: 80px; /* Place it under the floating menu */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Adjust positioning to truly center */
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow-y: auto;
+    max-height: 60vh;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ====== Review Answer Text ====== */
+#review-answer h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
 #review-answer p {
     font-size: 18px;
     line-height: 1.6;
 }
 
+/* ====== Image Styling for Question and Answers ====== */
+.answer-image {
+    width: 100%;             /* Ensure the image takes the full width of its container */
+    max-width: 300px;        /* Set a max-width to limit image size */
+    height: auto;            /* Maintain the aspect ratio */
+    max-height: 300px;       /* Set a max height to avoid excessively tall images */
+    margin-bottom: 10px;     /* Space between image and text */
+    object-fit: contain;     /* Ensure the image fits within the container without stretching */
+    border-radius: 8px;
+    display: block;          /* Ensures the image is centered inside the container */
+    margin-left: auto;       /* Centers the image horizontally */
+    margin-right: auto;      /* Centers the image horizontally */
+}
+
+.question-image {
+    max-width: 100%;
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+
+/* ====== Answer Section Styling ====== */
+.answer-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack images and text vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.answer-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+/* ====== User's Answer Styling (Red Highlighted) ====== */
+.user-answer {
+    background: linear-gradient(135deg, #FF4C4C, #D32F2F);
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ====== Correct Answer Styling (Green Highlighted) ====== */
+.correct-answer {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* ====== Button Container for Review page ====== */
 #nav-buttons {
-    position: absolute; /* Absolute positioning to stick to the bottom */
-    bottom: 20px; /* Space from the bottom of the screen */
-    left: 50%; /* Center the buttons horizontally */
-    transform: translateX(-50%); /* Adjust horizontal position to truly center */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Space between buttons */
+    gap: 20px;
     width: 100%;
-    max-width: 600px; /* Maximum width for the buttons container */
-    z-index: 10; /* Ensure buttons are above the content */
+    max-width: 600px;
+    z-index: 10;
 }
 
 /* ====== Buttons Styling ====== */
@@ -252,28 +379,27 @@ body, html {
     transition: transform 0.2s ease, background-color 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     width: auto;
-    min-width: 200px; /* Ensure buttons don't shrink */
+    min-width: 200px;
     text-align: center;
-    touch-action: manipulation; /* Ensures smooth touch responsiveness */
+    touch-action: manipulation;
 }
 
 /* ====== Button Colors ====== */
 #previous-btn {
-    background: linear-gradient(135deg, #FF8C00, #FF6347); /* Orange-red */
+    background: linear-gradient(135deg, #FF8C00, #FF6347);
 }
 
 #next-btn {
-    background: linear-gradient(135deg, #1E90FF, #00BFFF); /* Blue */
+    background: linear-gradient(135deg, #1E90FF, #00BFFF);
 }
 
 #review-btn {
-    /* Green gradient */
     background: linear-gradient(135deg, #FF4C4C, #D32F2F);
 }
 
 #restart-review-btn,
 #restart-btn {
-    background: linear-gradient(135deg, #4CAF50, #45a049); /* Red */
+    background: linear-gradient(135deg, #4CAF50, #45a049);
 }
 
 /* ====== Click Feedback ====== */
@@ -297,7 +423,7 @@ body, html {
 /* ====== Mobile Responsiveness ====== */
 @media (max-width: 500px) {
     #nav-buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
+        flex-direction: column;
         gap: 15px;
     }
 
@@ -305,7 +431,7 @@ body, html {
     #next-btn,
     #restart-review-btn,
     #restart-btn {
-        width: 100%; /* Ensure buttons fill the available width */
-        padding: 15px 0; /* Adjust padding for full-width buttons */
+        width: 100%;
+        padding: 15px 0;
     }
 }
