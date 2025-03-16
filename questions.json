@@ -1000,7 +1000,7 @@
   },
   {
     "question": "Aparatul notat cu C pe desenul de mai jos al unei celule prefabricate de medie tensiune de tip închis, reprezintă un:",
-    "image":"images/verde_8_intrebare.png",
+    "image":"images/verde_8_intrebare.PNG",
     "answers": [
       "Întreruptor",
       "Transformator de curent",
@@ -1137,27 +1137,27 @@
   {
     "question": "Care dintre schemele alăturate permite obținerea a două circuite de cuplă diagonală (cruce)?",
     "answers": [
-        { "text": "","image":"images/verde_23_answer1.png"},
-        { "text": "","image":"images/verde_23_answer2.png"},
-        { "text": "","image":"images/verde_23_answer3.png"}
+        { "text": "","image":"images/verde_23_answer1.PNG"},
+        { "text": "","image":"images/verde_23_answer2.PNG"},
+        { "text": "","image":"images/verde_23_answer3.PNG"}
     ],
     "correct": 1
   },
   {
     "question": "Care dintre schemele alăturate permite obținerea a două circuite de cuplă longitudinală?",
     "answers": [
-        { "text": "","image":"images/verde_24_answer1.png"},
-        { "text": "","image":"images/verde_24_answer2.png"},
-        { "text": "","image":"images/verde_24_answer3.png"}
+        { "text": "","image":"images/verde_24_answer1.PNG"},
+        { "text": "","image":"images/verde_24_answer2.PNG"},
+        { "text": "","image":"images/verde_24_answer3.PNG"}
     ],
     "correct": 0
   },
   {
     "question": "Care dintre schemele alăturate permite obținerea a două circuite de cuplă transversală?",
     "answers": [
-        { "text": "","image":"images/verde_25_answer1.png"},
-        { "text": "","image":"images/verde_25_answer2.png"},
-        { "text": "","image":"images/verde_25_answer3.png"}
+        { "text": "","image":"images/verde_25_answer1.PNG"},
+        { "text": "","image":"images/verde_25_answer2.PNG"},
+        { "text": "","image":"images/verde_25_answer3.PNG"}
     ],
     "correct": 2
   },
@@ -1181,7 +1181,7 @@
   },
   {
     "question": "Ce posibilități de limitare a curenților de scurtcircuit sunt de preferat pentru schema de mai jos?",
-    "image":"images/verde_28_intrebare.png",
+    "image":"images/verde_28_intrebare.PNG",
     "answers": [
       "Reducerea t.e.m, acționând asupra circuitului de excitație al generatorului",
       "Mărirea reacțantei schemei de alimentare între sursă și locul de defect",
@@ -1254,7 +1254,7 @@
   },
   {
     "question": "Compartimentul notat cu 2 pe desenul de mai jos al unei celule prefabricate de medie tensiune de tip închis, reprezintă:",
-    "image":"images/verde_36_intrebare.png",
+    "image":"images/verde_36_intrebare.PNG",
     "answers": [
       "Compartimentul de legătură cu rețeaua electrică",
       "Compartimentul aparatajului de comutație",
@@ -1264,7 +1264,7 @@
   },
   {
     "question": "Compartimentul notat cu 3 pe desenul de mai jos al unei celule prefabricate de medie tensiune de tip închis, reprezintă:",
-    "image":"images/verde_37_intrebare.png",
+    "image":"images/verde_37_intrebare.PNG",
     "answers": [
       "Compartimentul de legătură cu rețeaua electrică",
       "Compartimentul aparatajului de comutație",
@@ -1922,7 +1922,7 @@
 },
 {
     "question": "Circuitul din figură reprezintă",
-    "image":"images/verde_110_intrebare.png",
+    "image":"images/verde_110_intrebare.PNG",
     "answers": [
         "O cuplă cu funcțiuni multiple într-o stație cu două sisteme de bare colectoare",
         "Un circuit de linie dintr-o stație cu două sisteme de bare colectoare",
