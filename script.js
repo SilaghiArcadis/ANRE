@@ -75,6 +75,7 @@ function startQuiz(selectedQuestions) {
     document.getElementById("chapter2-btn").classList.add("hidden");
     document.getElementById("chapter3-btn").classList.add("hidden");
     document.getElementById("start-btn").classList.add("hidden");
+    document.getElementById("floating-bar").classList.remove("hidden"); // Shows floating bar
 
     document.getElementById("question-container").classList.remove("hidden");
     displayQuestion();
