@@ -6,21 +6,51 @@ let startTime;
 let timerInterval;
 let isAnswering = false;
 let wrongAnswers = []; // To store wrong answers
+let chapter1Questions = [];
+let chapter2Questions = [];
+let chapter3Questions = [];
+let allQuestions = [];
 
-// Fetch questions from JSON
+
+fetch("chapter1.json")
+    .then(response => response.json())
+    .then(data => {
+        chapter1Questions = shuffleArray(data).slice(0, 25);  // Pick 25 random questions
+    }) 
+    .catch(error => console.error('Error fetching chapter1:', error));
+
+fetch("chapter2.json")
+    .then(response => response.json())
+    .then(data => {
+        chapter2Questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+    }) 
+    .catch(error => console.error('Error fetching chapter2:', error));
+
+fetch("chapter3.json")
+    .then(response => response.json())
+    .then(data => {
+        chapter3Questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+    }) 
+    .catch(error => console.error('Error fetching chapter3:', error));
+
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+        allQuestions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
     })
     .catch(error => console.error('Error fetching questions:', error));
 
-document.getElementById("start-btn").addEventListener("click", startQuiz);
+document.getElementById("chapter1-btn").addEventListener("click",() => startQuiz(chapter1Questions));
+document.getElementById("chapter2-btn").addEventListener("click",() => startQuiz(chapter2Questions));
+document.getElementById("chapter3-btn").addEventListener("click",() => startQuiz(chapter3Questions));
+document.getElementById("start-btn").addEventListener("click",() => startQuiz(allQuestions));
 
 function startTimer() {
     startTime = new Date();
     timerInterval = setInterval(updateTimer, 1000);
 }
+
+
 
 function updateTimer() {
     let elapsed = Math.floor((new Date() - startTime) / 1000);
@@ -31,10 +61,22 @@ function updateTimer() {
     document.getElementById("timer").textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-function startQuiz() {
+function startQuiz(selectedQuestions) {
+    questions = selectedQuestions;
+    currentQuestionIndex = 0;
+    correctCount = 0;
+    wrongCount = 0;
+    startTime = new Date();
+    timerInterval = setInterval(updateTimer, 1000);
+    isAnswering = false;
+    wrongAnswers = [];
+
+    document.getElementById("chapter1-btn").classList.add("hidden");
+    document.getElementById("chapter2-btn").classList.add("hidden");
+    document.getElementById("chapter3-btn").classList.add("hidden");
     document.getElementById("start-btn").classList.add("hidden");
+
     document.getElementById("question-container").classList.remove("hidden");
-    startTimer();
     displayQuestion();
 }
 
@@ -116,8 +158,6 @@ function checkAnswer(selectedValue, correctValue, answerBtn, answerButtons, ques
 
     let isCorrect = JSON.stringify(selectedValue) === JSON.stringify(correctValue);
 
-    console.log("Selected Value:", selectedValue);
-    console.log("Correct Value:", correctValue);
 
     if (isCorrect) {
         correctCount++;
@@ -146,15 +186,11 @@ function checkAnswer(selectedValue, correctValue, answerBtn, answerButtons, ques
                 btnImage = imageElement.src;
             }
 
-            console.log("Button Text:", btnText);
-            console.log("Button Image:", btnImage);
 
             // Determină valorile corecte pentru text și imagine
             let correctText = typeof correctValue === "object" ? correctValue.text : correctValue;
             let correctImage = typeof correctValue === "object" && correctValue.image ? correctValue.image : null;
 
-            console.log("Correct Text:", correctText);
-            console.log("Correct Image:", correctImage);
 
             // Verifică dacă butonul se potrivește cu răspunsul corect
             let isTextMatch = btnText && btnText === correctText;
@@ -299,4 +335,6 @@ document.getElementById("next-btn")?.addEventListener("click", function() {
 // Utility: Shuffle array function
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
+
+    
 }

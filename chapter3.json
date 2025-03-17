@@ -1,0 +1,1793 @@
+[
+{
+    "question": "Protecția motoarelor electrice împotriva întreruperii sau scăderii tensiunii de alimentare și restabilirea ei ulterioară este o protecție:",
+    "answers": [
+        "Întotdeauna rapidă",
+        "Întotdeauna temporizată",
+        "Care poate fi temporizată în anumite cazuri"
+    ],
+    "correct": 2
+},
+{
+    "question": "În amplasamente cu risc de incendiu datorită prafului și/sau fibrelor, temperatura la suprafața corpurilor de iluminat, în caz de defect, trebuie să fie limitată la:",
+    "answers": [
+        "200°C",
+        "115°C",
+        "80°C"
+    ],
+    "correct": 1
+},
+{
+    "question": "Rezistența de izolație a unui circuit (de joasă tensiune) cu tensiune nominală > 500 V se măsoară în C.C și trebuie să aibă o valoare:",
+    "answers": [
+        "Mai mică de 0,5 MΩ",
+        "Mai mare sau egală cu 1 MΩ",
+        "Mai mare sau egală cu 2 MΩ"
+    ],
+    "correct": 1
+},
+{
+    "question": "Se admit doze comune pentru circuitele de iluminat normal, de prize, de comandă și de semnalizare dacă:",
+    "answers": [
+        "Acestea funcționează la aceeași tensiune",
+        "Întotdeauna",
+        "Dacă puterea instalată pe fiecare circuit nu depășește 2 kW"
+    ],
+    "correct": 0
+},
+{
+    "question": "Se prevede accesul pe la ambele capete pe coridoarele din dreptul tablourilor de distribuție formate din mai multe panouri având o lungime mai mare de:",
+    "answers": [
+        "10 m",
+        "3 m",
+        "5 m"
+    ],
+    "correct": 0
+},
+{
+    "question": "Protecția circuitelor împotriva supracurenților electrici, care se prevede pe toate conductoarele de fază, trebuie să producă deconectarea:",
+    "answers": [
+        "Neapărat a tuturor conductoarelor active",
+        "De regulă numai a conductorului în care este detectat supracurentul",
+        "Întotdeauna numai a conductorului în care este detectat supracurentul"
+    ],
+    "correct": 1
+},
+{
+    "question": "Pentru verificarea rezistenței de izolație a pardoselii trebuie efectuate cel puțin trei măsurări în același amplasament, una din aceste măsurări se efectuează la o distanță de orice conductor extern accesibil din amplasament de:",
+    "answers": [
+        "Cca. 0,5 m",
+        "Cca. 1 m",
+        "Cca. 2 m"
+    ],
+    "correct": 1
+},
+{
+    "question": "Alegerea caracteristicilor dispozitivelor de protecție în cazul motoarelor se face ținându-se seama:",
+    "answers": [
+        "Numai de sarcinile în regim normal de funcționare",
+        "Numai de sarcinile de pornire",
+        "De simultaneitatea sarcinilor în regim normal și de pornire"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conductorul neutru se leagă la dulia lămpii:",
+    "answers": [
+        "La borna din interior",
+        "La oricare dintre borne",
+        "La borna conectată la partea filetată a duliei"
+    ],
+    "correct": 2
+},
+{
+    "question": "Dimensionarea conductoarelor circuitelor de alimentare în cazul motoarelor se face ținându-se seama:",
+    "answers": [
+        "Numai de sarcinile în regim normal de funcționare",
+        "Numai de sarcinile de pornire",
+        "De simultaneitatea sarcinilor în regim normal și de pornire"
+    ],
+    "correct": 2
+},
+{
+    "question": "Este admisă racordarea prin prize la circuitul de alimentare al receptoarelor electrice cu putere nominală până la:",
+    "answers": [
+        "0,5 kW",
+        "1 kW",
+        "2 kW"
+    ],
+    "correct": 2
+},
+{
+    "question": "Corpurile de iluminat care se instalează în depozite cu materiale combustibile, categoria BE 2, trebuie să fie întotdeauna:",
+    "answers": [
+        "Echipate cu lămpi fluorescente",
+        "Prevăzute cu grătar protector",
+        "Prevăzute cu glob, respectiv cu difuzor"
+    ],
+    "correct": 2
+},
+{
+    "question": "În încăperi de locuit și similare se recomandă ca traseele tuburilor orizontale pe pereți să fie distanțate față de plafon la:",
+    "answers": [
+        "1 m",
+        "0,5 m",
+        "Circa 0,3 m"
+    ],
+    "correct": 2
+},
+{
+    "question": "În instalațiile de joasă tensiune aferente clădirilor, rezistența electrică a izolației trebuie măsurată:",
+    "answers": [
+        "Numai între două conductoare active",
+        "Numai între conductoarele active luate 2 câte 2",
+        "Între conductoarele active și conductorul de protecție conectat la rețeaua de legare la pământ"
+    ],
+    "correct": 2
+},
+{
+    "question": "În mod special se prevăd conductoare din cupru la circuitele electrice pentru alimentarea de sisteme și instalații de prevenire și stingere a incendiilor, atunci când secțiunea conductoarelor din aluminiu ar rezulta mai mică de:",
+    "answers": [
+        "16 mm²",
+        "25 mm²",
+        "10 mm²"
+    ],
+    "correct": 2
+},
+{
+    "question": "La circuitele electrice pentru alimentarea receptoarelor de importanță deosebită (receptoare din blocul operator al spitalelor, iluminat de siguranță, etc) materialul conductoarelor este:",
+    "answers": [
+        "Întotdeauna aluminiu",
+        "Întotdeauna cupru",
+        "Cupru sau aluminiu, condiționat"
+    ],
+    "correct": 2
+},
+{
+    "question": "Legăturile barelor se execută:",
+    "answers": [
+        "Numai prin sudare",
+        "Numai cu ajutorul șuruburilor",
+        "Cu ajutorul șuruburilor, clemelor sau prin sudare"
+    ],
+    "correct": 2
+},
+{
+    "question": "Legăturile conductoarelor de protecție trebuie executate:",
+    "answers": [
+        "Numai prin sudare",
+        "Numai prin înşurubări, cu contrapiulițe și șaibă elastică",
+        "Prin sudare sau prin înşurubări cu contrapiulițe și inele de siguranță ( saibă elastică )"
+    ],
+    "correct": 2
+},
+{
+    "question": "Legăturile conductoarelor izolate se acoperă cu material electroizolant (de ex. tub varniș, bandă izolantă, capsule izolante etc):",
+    "answers": [
+        "Numai dacă sunt accesibile",
+        "Opțional",
+        "Întotdeauna"
+    ],
+    "correct": 2
+},
+{
+    "question": "Legăturile electrice între conductoare izolate pentru îmbinări sau derivații se fac:",
+    "answers": [
+        "În interiorul tuburilor sau țevilor de protecție",
+        "În interiorul golurilor din elementele de construcție",
+        "Numai în doze sau cutii de legătură"
+    ],
+    "correct": 2
+},
+{
+    "question": "Măsurile pentru evitarea contactului direct cu materialul combustibil al echipamentelor electrice cu grad de protecție inferior IP54 se aplică:",
+    "answers": [
+        "Numai la montarea aparentă a elementelor de instalații electrice",
+        "La montarea sub tencuială a elementelor de instalații electrice",
+        "Atât la montarea aparentă cât și la montarea îngropată"
+    ],
+    "correct": 2
+},
+{
+    "question": "Montarea pe materiale combustibile a echipamentelor electrice cu grad de protecție inferior IP54:",
+    "answers": [
+        "Este strict interzisă",
+        "Este admisă fără restricții",
+        "Se face interpunând materiale incombustibile între acestea și materialul combustibil sau elemente de distanțare"
+    ],
+    "correct": 2
+},
+{
+    "question": "Montarea tuburilor de protecție a conductoarelor electrice de j.t. pe pardoseala combustibilă a podurilor:",
+    "answers": [
+        "Este strict interzisă",
+        "Este admisă fără restricții",
+        "Trebuie evitată, se poate face excepție pentru tuburi metalice"
+    ],
+    "correct": 2
+},
+{
+    "question": "Motoarele electrice alimentate prin circuite separate trebuie prevăzute pe toate fazele:",
+    "answers": [
+        "Numai cu dispozitiv de protecție la scurtcircuit, pentru puteri mai mici de 5 kW",
+        "Numai cu protecție la suprasarcini, pentru puteri mai mici de 5 kW",
+        "De regulă, cu dispozitive de protecție la scurtcircuit și dispozitive de protecție la suprasarcină"
+    ],
+    "correct": 2
+},
+{
+    "question": "Ramificațiile din distribuțiile cu conductoare electrice libere montate pe izolatoare în interiorul clădirilor se fixează astfel încât:",
+    "answers": [
+        "Conductoarele electrice din traseul principal să poată suporta eforturile de tracțiune suplimentare",
+        "Să solicite cu tracțiune redusă conductoarele electrice din traseul principal",
+        "Să nu solicite la tracțiune conductoarele electrice din traseul principal"
+    ],
+    "correct": 2
+},
+{
+    "question": "Se admite alimentarea a mai multor receptoare electrice de putere de aceeași natură și destinație (de ex. motoare) prin același circuit de j.t. prevăzut cu protecție comună la scurtcircuit, dacă puterea totală instalată nu depășește:",
+    "answers": [
+        "8 kW",
+        "10 kW",
+        "15 kW"
+    ],
+    "correct": 2
+},
+{
+    "question": "Amplasarea aparatelor cu ulei în interiorul tablourilor electrice:",
+    "answers": [
+        "Este interzisă",
+        "Este permisă în anumite condiții",
+        "Este permisă, dar nu se recomandă"
+    ],
+    "correct": 0
+},
+{
+    "question": "Amplasarea instalațiilor electrice de conexiuni și distribuție în interiorul încăperilor de cabluri:",
+    "answers": [
+        "Este interzisă, cu unele excepții",
+        "Este permisă întotdeauna",
+        "Nu există în prescripțiile energetice o prevedere în acest sens"
+    ],
+    "correct": 0
+},
+{
+    "question": "Căile de curent ce nu se pot realiza în execuție etanșă, în încăperi și în spații din exterior cu mediu coroziv, pot fi realizate întotdeauna din:",
+    "answers": [
+        "Cu",
+        "Al",
+        "Oțel"
+    ],
+    "correct": 0
+},
+{
+    "question": "Circuitele de joasă tensiune de curent alternativ, de curent continuu sau de tensiuni diferite:",
+    "answers": [
+        "Se recomandă să fie grupate pe același panou (dulap)",
+        "Este interzisă gruparea pe același panou (dulap)",
+        "Este admisă gruparea pe același panou (dulap), în anumite condiții"
+    ],
+    "correct": 1
+},
+{
+    "question": "Puterea instalată pe un circuit monofazat de prize din clădirile de locuit și social-culturale este de:",
+    "answers": [
+        "1 kW",
+        "1,5 kW",
+        "2 kW"
+    ],
+    "correct": 2
+},
+{
+    "question": "În cazul în care temperatura minimă este sub valorile stabilite de norme, montarea aparatelor înglobate în echipamentul de joasă tensiune:",
+    "answers": [
+        "Se admite dacă se prevede o încălzire locală",
+        "Nu se admite",
+        "Se admite în cazul în care aparatele au ulei"
+    ],
+    "correct": 0
+},
+{
+    "question": "Întreruperea conductorului de protecție prin aparate de comutație:",
+    "answers": [
+        "Este permisă",
+        "Nu este permisă",
+        "De regulă nu este permisă, cu excepția anumitor cazuri"
+    ],
+    "correct": 1
+},
+{
+    "question": "La realizarea tablourilor și barelor de distribuție de j.t., distanța minimă de izolare în aer între piesele fixe sub tensiune ale diferitelor faze, precum și între acestea și părți metalice legate la pământ trebuie să fie de cel puțin:",
+    "answers": [
+        "10 mm",
+        "15 mm",
+        "20 mm"
+    ],
+    "correct": 1
+},
+{
+    "question": "Montarea siguranțelor de j.t. pe conductoarele instalației de protecție:",
+    "answers": [
+        "Este interzisă",
+        "Este întotdeauna permisă",
+        "Este interzisă numai în cazul în care conductorul de protecție este folosit drept conductor de nul"
+    ],
+    "correct": 0
+},
+{
+    "question": "Siguranțele cu capac filetat trebuie să fie montate în așa fel încât:",
+    "answers": [
+        "Conductoarele de alimentare să fie legate la șuruburile de contact",
+        "Conductoarele de plecare spre consumatori să fie legate la șuruburile de contact",
+        "Conductoarele de alimentare să fie legate la duliile filetate"
+    ],
+    "correct": 0
+},
+{
+    "question": "Tabloul de distribuție de j.t. trebuie montat:",
+    "answers": [
+        "În plan orizontal",
+        "Perfect vertical și bine fixat",
+        "Nu există prevederi speciale cu privire la modul de montare"
+    ],
+    "correct": 1
+},
+{
+    "question": "Supunerea legăturilor electrice la eforturi de tracțiune:",
+    "answers": [
+        "Este permisă întotdeauna",
+        "Este permisă în cazul conductoarelor de cupru",
+        "Este interzisă"
+    ],
+    "correct": 2
+},
+{
+    "question": "Tablourile de distribuție din locuințe se pot instala astfel încât înălțimea laturii de sus a tablourilor față de pardoseala finită să nu depășească:",
+    "answers": [
+        "2 m",
+        "2,3 m",
+        "2,5 m"
+    ],
+    "correct": 2
+},
+{
+    "question": "Tuburile și țevile metalice sau din material plastic din instalațiile electrice de j.t. se instalează:",
+    "answers": [
+        "Numai aparent",
+        "Numai îngropat",
+        "Aparent sau îngropat, în anumite condiții"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conductoarele coloanelor electrice:",
+    "answers": [
+        "Trebuie să aibă aceeași secțiune pe toată lungimea lor",
+        "Pot avea două secțiuni dacă lungimea coloanelor depășește 20m",
+        "Pot avea două secțiuni dacă lungimea coloanelor depășește 10m"
+    ],
+    "correct": 0
+},
+{
+    "question": "Conductorul de protecție al coloanelor electrice individuale trebuie să fie legat la pământ:",
+    "answers": [
+        "Numai dacă secțiunea conductorului este mai mică de 10 mm²",
+        "În cazul tablourilor de distribuție ale consumatorilor, la borna de legare la pământ de pe rama metalică a tablourilor",
+        "Doar dacă secțiunea conductorului nu are valoare constantă pe toată lungimea coloanei"
+    ],
+    "correct": 1
+},
+{
+    "question": "Montarea dozelor de trecere este obligatorie în cazul în care lungimea coloanelor în linie dreaptă, pe orizontală, depășește:",
+    "answers": [
+        "10 m",
+        "15 m",
+        "20 m"
+    ],
+    "correct": 1
+},
+{
+    "question": "Pentru asigurarea selectivității, între curenții nominali ai fuzibilelor a două siguranțe consecutive, diferența trebuie să fie de cel puțin:",
+    "answers": [
+        "Două trepte",
+        "O treaptă",
+        "Trei trepte"
+    ],
+    "correct": 0
+},
+{
+    "question": "Încadrarea în clasele de reacție la foc și rezistență la foc a materialelor se face în conformitate cu prevederile:",
+    "answers": [
+        "PE 102",
+        "Reglementărilor specifice",
+        "Normativului I 7"
+    ],
+    "correct": 1
+},
+{
+    "question": "Amplasarea instalațiilor electrice de joasă tensiune pe trasee comune cu acelea ale altor instalații sau utilaje care ar putea să le pericliteze în funcționare normală sau în caz de avarie:",
+    "answers": [
+        "Este interzisă",
+        "Trebuie evitată",
+        "Este opțiunea proiectantului"
+    ],
+    "correct": 1
+},
+{
+    "question": "Masă (a unui echipament sau element de construcție) reprezintă:",
+    "answers": [
+        "Elemente conductoare din instalație aflate sub tensiune",
+        "Elemente izolante din instalație aflate în legătură cu pământul",
+        "Parte conductoare accesibilă a unui echipament care poate fi atinsă și care în mod normal nu se află sub tensiune, dar care poate fi pusă sub tensiune în urma unui defect al izolației de bază"
+    ],
+    "correct": 2
+},
+{
+    "question": "Dacă protecția motoarelor contra suprasarcinilor este realizată cu întrerupere, dispozitivul de comutație trebuie să întrerupă obligatoriu:",
+    "answers": [
+        "Toate conductoarele active",
+        "Conductorul neutru",
+        "Toate conductoarele de fază"
+    ],
+    "correct": 2
+},
+{
+    "question": "Simbolul literal T utilizat pentru notarea schemei de legare la pământ de tip TN are următoarea semnificație:",
+    "answers": [
+        "Izolarea tuturor părților active față de pământ, sau legarea la pământ a unui punct printr-o impedanță de valoare foarte mare",
+        "Legarea directă la pământ a maselor instalației, independent de eventuala legare la pământ a unui punct al alimentării",
+        "Legarea directă la pământ a unui punct activ - .neutru, în cazul în care acesta este accesibil sau a unui conductor de fază, în cazul în care punctul neutru nu este accesibil"
+    ],
+    "correct": 2
+},
+{
+    "question": "Simbolul literal T utilizat pentru notarea schemei de legare la pământ de tip IT are următoarea semnificație:",
+    "answers": [
+        "Izolarea tuturor părților active față de pământ, sau legarea la pământ a unui punct printr-o impedanță de valoare foarte mare",
+        "Legarea directă la pământ a maselor instalației",
+        "Legarea directă la pământ a unui punct activ - .neutrul, în cazul în care acesta este accesibil sau a unui conductor de fază, în cazul în care neutrul nu este accesibil"
+    ],
+    "correct": 1
+},
+{
+    "question": "Schema de legare la pământ de tip TN-S, în care un conductor de protecție distinct este folosit pentru întreaga schemă, se utilizează:",
+    "answers": [
+        "Reglementările nu fac precizări privind cazurile în care se utilizează acest tip de schemă",
+        "De la ultimul tablou spre consumator",
+        "Numai în rețelele cu tensiune peste 500 V"
+    ],
+    "correct": 1
+},
+{
+    "question": "Schema de legare la pământ de tip TN-S, în care un conductor de protecție distinct este folosit pentru întreaga schemă, se utilizează:",
+    "answers": [
+        "Când trebuie separate conductoarele PE și N pentru asigurarea funcționării protecției",
+        "Numai în rețelele cu tensiune peste 500 V",
+        "Reglementările nu fac precizări privind cazurile în care se utilizează acest tip de schemă"
+    ],
+    "correct": 0
+},
+{
+    "question": "Rețeaua de tip IT se utilizează:",
+    "answers": [
+        "Numai cu dispozitiv de control permanent al izolației conductorului neutru față de pământ și/sau va declanșa la primul defect",
+        "Fără a fi necesară luarea unor măsuri anumite",
+        "Utilizarea unui anumit tip de rețea (ca schemă de protecție) și eventual prevederea unor protecții sunt opțiuni ale proiectantului"
+    ],
+    "correct": 0
+},
+{
+    "question": "Se consideră atingere directă:",
+    "answers": [
+        "Contactul persoanelor sau animalelor domestice sau de crescătorie cu mase puse accidental sub tensiune datorită unui defect electric",
+        "Contactul direct al persoanelor sau al animalelor cu părți active",
+        "Contactul persoanelor sau animalelor domestice sau de crescătorie cu părți ale unei instalații electrice"
+    ],
+    "correct": 1
+},
+{
+    "question": "Se consideră atingere indirectă:",
+    "answers": [
+        "Contactul nemijlocit sau prin intermediul unui element conductor al persoanelor sau animalelor domestice sau de crescătorie cu părți active ale unei instalații electrice",
+        "Contactul persoanelor sau animalelor domestice sau de crescătorie cu părți ale unei instalații electrice",
+        "Contact electric al persoanelor sau al animalelor cu părțile conductoare accesibile puse sub tensiune ca urmare a unui defect"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conform I7, parte activă a unei instalații este:",
+    "answers": [
+        "Conductorul PEN",
+        "Conductorul neutru (N)",
+        "Partea conductoare accesibilă a unui echipament electric sau a unui element de construcție care poate fi atinsă, dar care în mod normal nu este sub tensiune"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conform I7, parte activă a unei instalații este:",
+    "answers": [
+        "Conductor sau parte conductoare destinată să fie pusă sub tensiune în funcționare normală",
+        "Partea conductoare accesibilă a unui echipament electric sau a unui element de construcție care poate fi atinsă, dar care în mod normal nu este sub tensiune",
+        "Conductorul PEN"
+    ],
+    "correct": 0
+},
+{
+    "question": "Conform I7, parte conductoare accesibilă este:",
+    "answers": [
+        "Partea izolantă accesibilă a unui element de construcție care poate fi atinsă, și care poate ajunge sub tensiune în caz de defect",
+        "Parte conductoare a unui echipament, care poate fi atinsă și care nu este in mod normal sub tesniune, dar care poate ajunge sub tensiune in cazul unui defect al izolatiei de bază",
+        "Elemente conductoare din instalație aflate sub tensiune"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conductorul neutru (N) trebuie să aibă aceeași secțiune cu conductorul de fază:",
+    "answers": [
+        "În circuitele monofazate cu trei conductoare și în circuitele polifazate indiferent de secțiunea conductoarelor de fază",
+        "În circuitele monofazate cu trei conductoare și în circuitele polifazate ale căror conductoare de fază au secțiunea mai mică sau egală cu 16 mm² Cu sau 25 mm² Al",
+        "În circuitele monofazate cu trei conductoare și în circuitele polifazate ale căror conductoare de fază au secțiunea mai mică sau egală cu 25 mm² Cu sau 35 mm² Al"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conductorul neutru (N) trebuie să aibă aceeași secțiune cu conductorul de fază:",
+    "answers": [
+        "În circuitele monofazate cu două conductoare, indiferent de secțiunea conductoarelor",
+        "În circuitele monofazate cu trei conductoare și în circuitele polifazate ale căror conductoare de fază au secțiunea mai mică sau egală cu 25 mm² Cu sau 35 mm² Al",
+        "În circuitele monofazate cu trei conductoare și în circuitele polifazate indiferent de secțiunea conductoarelor de fază"
+    ],
+    "correct": 0
+},
+{
+    "question": "Secțiunile conductoarelor de fază trebuie să fie corespunzătoare din punct de vedere al:",
+    "answers": [
+        "Secțiunii conductorului de protecție",
+        "Tipului rețelei (LEA sau LES)",
+        "Căderii de tensiune"
+    ],
+    "correct": 2
+},
+{
+    "question": "La instalațiile electrice de putere secțiunile conductoarelor de fază trebuie să fie corespunzătoare din punct de vedere al:",
+    "answers": [
+        "Tipului circuitului de alimentare (aerian sau subteran)",
+        "Secțiunii conductorului de protecție",
+        "Stabilității termice în regim de defect"
+    ],
+    "correct": 2
+},
+{
+    "question": "Valoarea curentului maxim admisibil într-un conductor în regim permanent de lucru depinde de:",
+    "answers": [
+        "Tipul receptorului alimentat",
+        "Lungimea circuitului",
+        "Secțiunea conductorului"
+    ],
+    "correct": 2
+},
+{
+    "question": "Valoarea curentului maxim admisibil într-un conductor în regim permanent de lucru depinde de:",
+    "answers": [
+        "Lungimea circuitului",
+        "Materialul conductorului",
+        "Tipul receptorului alimentat"
+    ],
+    "correct": 1
+},
+{
+    "question": "Valoarea curentului maxim admisibil într-un conductor în regim permanent de lucru depinde de:",
+    "answers": [
+        "Lungimea circuitului",
+        "Natura izolației conductorului",
+        "Tipul receptorului alimentat"
+    ],
+    "correct": 1
+},
+{
+    "question": "Valoarea curentului maxim admisibil într-un conductor în regim permanent de lucru depinde de:",
+    "answers": [
+        "Modul de montare",
+        "Tipul receptorului alimentat",
+        "Lungimea circuitului"
+    ],
+    "correct": 0
+},
+{
+    "question": "La instalațiile electrice de putere de joasă tensiune, densitatea maximă de curent admisă în regim de scurtă durată la pornire este de:",
+    "answers": [
+        "50 A/mm² pentru conductoare de cupru",
+        "35 A/mm² pentru conductoare de aluminiu",
+        "20 A/mm² pentru conductoare de aluminiu"
+    ],
+    "correct": 2
+},
+{
+    "question": "La instalațiile electrice de putere de joasă tensiune, densitatea maximă de curent admisă în regim de scurtă durată la pornire este de:",
+    "answers": [
+        "35 A/mm² pentru conductoare de aluminiu",
+        "35 A/mm² pentru conductoare de cupru",
+        "16 A/mm² pentru conductoare de aluminiu"
+    ],
+    "correct": 1
+},
+{
+    "question": "În cazul în care alimentarea consumatorului se face din cofretul de branșament de joasă tensiune, valorile căderilor de tensiune, în regim normal de funcționare față de tensiunea nominală a rețelei, trebuie să fie de cel mult:",
+    "answers": [
+        "3% pentru receptoarele din instalațiile electrice de lumină și 5% pentru restul receptoarelor (forță etc)",
+        "10% pentru toate tipurile de receptoare",
+        "5% pentru receptoarele din instalațiile electrice de lumină și 12% pentru restul receptoarelor (forță etc.)"
+    ],
+    "correct": 0
+},
+{
+    "question": "În cazul instalațiilor electrice de alimentare a motoarelor electrice, pierderea de tensiune la pornire, față de tensiunea nominală (dacă nu se dispune de alte date specificate de producătorul motorului etc.), trebuie să fie cel mult egală cu:",
+    "answers": [
+        "20%",
+        "25%",
+        "12%"
+    ],
+    "correct": 2
+},
+{
+    "question": "Pentru motoarele monofazate, protecția contra suprasarcinilor se face:",
+    "answers": [
+        "Obligatoriu pe conductorul de fază",
+        "Obligatoriu pe conductorul neutru",
+        "Opțional pentru motoare mai mici de 1,1 kW"
+    ],
+    "correct": 0
+},
+{
+    "question": "Alimentarea transformatorului de sonerie sau soneriei de 220(230) V se face:",
+    "answers": [
+        "Numai direct din tabloul de distribuție",
+        "Numai dintr-un circuit de iluminat normal",
+        "Dintr-un circuit de prize"
+    ],
+    "correct": 2
+},
+{
+    "question": "Alimentarea transformatorului de sonerie sau soneriei de 220(230) V se face:",
+    "answers": [
+        "Numai direct din tabloul de distribuție",
+        "Dintr-un circuit de iluminat normal",
+        "Numai dintr-un circuit de prize"
+    ],
+    "correct": 1
+},
+{
+    "question": "Secțiunea minimă admisă pentru conductoare de fază din circuite pentru prize monofazate în instalațiile electrice din interiorul clădirilor este de:",
+    "answers": [
+        "2,5 mm² cupru",
+        "1,5 mm² cupru, 2,5 mm² aluminiu",
+        "4 mm² aluminiu"
+    ],
+    "correct": 0
+},
+{
+    "question": "Secțiunea minimă admisă a conductorului de fază pentru circuitul unui receptor electrocasnic monofazat cu putere de peste 2 kW este de:",
+    "answers": [
+        "2,5 mm² cupru",
+        "1,5 mm² cupru, 2,5 mm² aluminiu",
+        "4 mm² aluminiu"
+    ],
+    "correct": 0
+},
+{
+    "question": "Pentru circuite monofazate, conductorul neutru (N) va avea:",
+    "answers": [
+        "Aceeași secțiune ca și conductorul de fază",
+        "Aceeași secțiune ca și conductorul de fază, numai pentru conductoare de cupru",
+        "Aceeași secțiune ca și conductorul de fază, numai pentru conductoare de aluminiu"
+    ],
+    "correct": 0
+},
+{
+    "question": "Pentru un circuit trifazat cu patru conductoare de aluminiu cu secțiunea conductoarelor de fază de 35 mm², conductorul neutru are secțiunea minimă de:",
+    "answers": [
+        "16 mm²",
+        "25 mm²",
+        "35 mm²"
+    ],
+    "correct": 1
+},
+{
+    "question": "Protecția unui motor trifazat împotriva suprasarcinii trebuie să fie prevăzută:",
+    "answers": [
+        "Pe toate conductoarele de fază și pe conductorul neutru",
+        "Pe două conductoare de fază",
+        "Pe toate conductoarele de fază"
+    ],
+    "correct": 2
+},
+{
+    "question": "Cablurile de energie la circuitele care alimentează receptoare de importanță deosebită, se prevăd cu conductoare de cupru atunci când secțiunea conductoarelor (din aluminiu) ar rezulta mai mică de:",
+    "answers": [
+        "10 mm²",
+        "16 mm²",
+        "6 mm²"
+    ],
+    "correct": 0
+},
+{
+    "question": "Branșamentul electric este partea din instalația de distribuție a energiei electrice cuprinsă între linia electrică și:",
+    "answers": [
+        "Firida de branșament",
+        "Coloana electrică",
+        "Punctul de delimitare între distribuitor și consumator reprezentat de bornele contorului"
+    ],
+    "correct": 2
+},
+{
+    "question": "Întrerupătoarele, comutatoarele și butoanele de lumină se montează, față de nivelul pardoselii finite, la înălțimea de:",
+    "answers": [
+        "1 m de la axul aparatului",
+        "0,6-1,5 m de la axul aparatului",
+        "1,5 m de la axul aparatului"
+    ],
+    "correct": 1
+},
+{
+    "question": "Prevederile normativului I7-2011 se aplică la proiectarea, execuția și exploatarea instalațiilor electrice aferente:",
+    "answers": [
+        "Clădirilor cu funcțiuni agroindustriale și agrozootehnice",
+        "Minelor și carierelor",
+        "Depozitelor de materiale pirotehnice și explozive"
+    ],
+    "correct": 0
+},
+{
+    "question": "Montarea, pe conductoarele de protecție, a unor elemente care pot produce întreruperea circuitului este:",
+    "answers": [
+        "Interzisă",
+        "Permisă în anumite condiții",
+        "La latitudinea consumatorului"
+    ],
+    "correct": 0
+},
+{
+    "question": "Alimentarea receptoarelor cu rol de securitate la incendiu trebuie asigurată:",
+    "answers": [
+        "Întotdeauna din două surse de alimentare independente",
+        "Dintr-o singură sursă de alimentare, în anumite cazuri",
+        "Din una sau din două surse, conform opțiunii consumatorului"
+    ],
+    "correct": 1
+},
+{
+    "question": "Amplasarea aparatelor, echipamentelor și receptoarelor electrice în locuri în care ar putea fi expuse direct la apă, ulei, substanțe corozive, căldură sau șocuri mecanice:",
+    "answers": [
+        "Se admite",
+        "Se admite condiționat",
+        "Este interzisă"
+    ],
+    "correct": 2
+},
+{
+    "question": "Amplasarea instalațiilor electrice sub conducte sau utilaje pe care poate să apară condens:",
+    "answers": [
+        "Se admite întotdeauna",
+        "Este total interzis",
+        "Se admite condiționat"
+    ],
+    "correct": 2
+},
+{
+    "question": "Corpurile de iluminat echipate cu lămpi cu descărcări se prevăd în orice tip de încăpere cu:",
+    "answers": [
+        "Grătar protector",
+        "Dispozitiv pentru îmbunătățirea factorului de putere",
+        "Difuzor"
+    ],
+    "correct": 1
+},
+{
+    "question": "Dispozitivele pentru suspendarea corpurilor de iluminat (cârlige, bolțuri, dibluri, etc.) se aleg astfel încât să suporte fără deformări:",
+    "answers": [
+        "Peste 5 kg",
+        "De 5 ori greutatea corpului de iluminat, dar nu mai puțin de 10 kg",
+        "De 3 ori greutatea corpului de iluminat utilizat"
+    ],
+    "correct": 1
+},
+{
+    "question": "Este obligatorie protecția la suprasarcini pentru: ?",
+    "answers": [
+        "Instalații din încăperi din categoriile celor cu risc de incendiu sau de explozie",
+        "Instalații de comandă",
+        "Instalații de semnalizare"
+    ],
+    "correct": 0
+},
+{
+    "question": "Utilizarea conductelor metalice pentru apă drept conductoare de protecție",
+    "answers": [
+        "Este recomandată",
+        "Este permisă condiționat",
+        "Nu este permisă"
+    ],
+    "correct": 2
+},
+{
+    "question": "Îmbinarea tuburilor de protecție a conductoarelor electrice la trecerile prin elemente de construcție este",
+    "answers": [
+        "Admisă",
+        "Interzisă",
+        "Admisă doar pentru tuburi cu diametru mai mic de 16 mm"
+    ],
+    "correct": 1
+},
+{
+    "question": "În camerele de copii din creșe, grădinițe, spitale de copii, prizele trebuie montate pe pereți la următoarele înălțimi măsurate de la axul aparatului la nivelul pardoselii finite:",
+    "answers": [
+        "Peste 1m",
+        "Peste 1.5m",
+        "Peste 2m"
+    ],
+    "correct": 1
+},
+{
+    "question": "În cazul consumatorilor racordați direct la rețeaua de joasă tensiune a distribuitorului, pornirea directă a motoarelor monofazate se admite pentru o putere de până la",
+    "answers": [
+        "3 kW",
+        "4 kW",
+        "5.5 kW"
+    ],
+    "correct": 1
+},
+{
+    "question": "În cazul consumatorilor racordați direct la rețeaua de joasă tensiune a distribuitorului, pornirea directă a motoarelor trifazate se admite pentru o putere de până la",
+    "answers": [
+        "4 kW",
+        "5.5 kW",
+        "7.5 kW"
+    ],
+    "correct": 1
+},
+{
+    "question": "Tablourile de distribuție se vor executa",
+    "answers": [
+        "Numai în construcție deschisă",
+        "Numai în construcție închisă (protejată)",
+        "În construcție deschisă sau închisă, în funcție de condițiile de influențe externe și grad de protecție"
+    ],
+    "correct": 2
+},
+{
+    "question": "În clădirile de locuit se prevăd în fiecare încăpere",
+    "answers": [
+        "Cel mult două prize",
+        "Prize după necesități",
+        "Cel puțin trei prize"
+    ],
+    "correct": 1
+},
+{
+    "question": "În locuințe se prevede câte un circuit de priză separat numai pentru receptoare cu puteri de peste:",
+    "answers": [
+        "2.5 kW",
+        "2 kW",
+        "3 kW"
+    ],
+    "correct": 1
+},
+{
+    "question": "Instalarea conductoarelor electrice în tuburi sau țevi pozate în pământ",
+    "answers": [
+        "Este interzisă",
+        "Este admisă",
+        "Este admisă numai pentru conductoare de cupru"
+    ],
+    "correct": 0
+},
+{
+    "question": "Pe circuitele secundare ale transformatoarelor de curent",
+    "answers": [
+        "Este obligatoriu să se prevadă protecția la suprasarcină",
+        "Este obligatoriu să se prevadă protecția la scurtcircuit",
+        "Se permite renunțarea la protecția la scurtcircuit"
+    ],
+    "correct": 2
+},
+{
+    "question": "Pe circuitele secundare ale transformatoarelor de curent",
+    "answers": [
+        "Este obligatoriu să se prevadă protecția la suprasarcină",
+        "Se recomandă să nu se prevadă protecția la suprasarcină",
+        "Este obligatoriu să se prevadă protecția la scurtcircuit"
+    ],
+    "correct": 1
+},
+{
+    "question": "Protecția la suprasarcină și protecția la scurtcircuit",
+    "answers": [
+        "Trebuie asigurate prin dispozitive de protecție separate",
+        "Pot fi asigurate printr-un singur dispozitiv de protecție",
+        "Trebuie asigurate printr-un singur dispozitiv de protecție"
+    ],
+    "correct": 1
+},
+{
+    "question": "Siguranțele fuzibile sunt dispozitive care protejează",
+    "answers": [
+        "Numai la curenți de suprasarcină",
+        "Numai la curenți de scurtcircuit",
+        "Atât la curenți de suprasarcină și la curenți de scurtcircuit"
+    ],
+    "correct": 2
+},
+{
+    "question": "În încăperi în care se impun condiții speciale de protecție datorită utilizatorilor (copii, bolnavi mintal etc.), prizele trebuie să fie",
+    "answers": [
+        "Montate aparent",
+        "Prevăzute cu dispozitive de protecție diferențială ≤ 30 mA",
+        "De tip îngropat"
+    ],
+    "correct": 1
+},
+{
+    "question": "În încăperi în care se impun condiții speciale de protecție datorită utilizatorilor (copii, bolnavi mintal etc.), prizele trebuie să fie",
+    "answers": [
+        "De tip special (de ex. cu obturator)",
+        "De tip îngropat",
+        "Montate aparent"
+    ],
+    "correct": 0
+},
+{
+    "question": "Întrerupătoarele, comutatoarele, și butoanele de lumină trebuie montate",
+    "answers": [
+        "Numai pe conductoarele de fază",
+        "Numai pe conductorul de nul",
+        "Pe fază sau pe nul, nu are importanță"
+    ],
+    "correct": 0
+},
+{
+    "question": "Culoarea verde-galben pentru izolația conductoarelor si cablurilor se folosește pentru marcarea conductorului de",
+    "answers": [
+        "Fază",
+        "Neutru de lucru",
+        "De protecție și de neutru"
+    ],
+    "correct": 2
+},
+{
+    "question": "La consumatorii alimentați din posturi de transformare proprii, puterea celui mai mare motor alimentat pe j.t., care pornește direct, nu va depăși",
+    "answers": [
+        "10% din puterea transformatorului din care este alimentat",
+        "20% din puterea transformatorului din care este alimentat",
+        "30% din puterea transformatorului din care este alimentat"
+    ],
+    "correct": 1
+},
+{
+    "question": "Legarea conductoarelor din cupru la aparate, mașini, elemente metalice fixe, se face (de regulă) prin strângere mecanică cu șuruburi în cazul conductoarelor cu secțiuni mai mici sau egale cu",
+    "answers": [
+        "16 mmp",
+        "10 mmp",
+        "6 mmp"
+    ],
+    "correct": 1
+},
+{
+    "question": "Fiecare conductor conectat la bara principală de legare la pământ la tabloul general",
+    "answers": [
+        "Nu este obligatoriu să poată fi deconectat individual",
+        "Trebuie să poată fi deconectat ușor, fără utilizarea unei scule",
+        "Trebuie să poată fi deconectat individual"
+    ],
+    "correct": 2
+},
+{
+    "question": "Legăturile conductoarelor din aluminiu pentru îmbinări sau derivații trebuie să se facă:",
+    "answers": [
+        "Prin răsucire și matisare",
+        "Prin cleme speciale, prin presare cu scule speciale sau prin sudare",
+        "Prin lipire cu cositor"
+    ],
+    "correct": 1
+},
+{
+    "question": "În instalațiile electrice pentru șantiere de construcții și de demolare, rezistența de dispersie a prizei de pământ și rezistența conductoarelor de protecție până la receptor trebuie să fie de",
+    "answers": [
+        "Maximum 1Ω",
+        "Minimum 4Ω",
+        "Maximum 4Ω"
+    ],
+    "correct": 2
+},
+{
+    "question": "Prevederile normativului 17-2011 se aplică la proiectarea, execuția și exploatarea instalațiilor electrice aferente:",
+    "answers": [
+        "Clădirilor prefabricate",
+        "Minelor și carierelor",
+        "Depozitelor de materiale pirotehnice și explozive"
+    ],
+    "correct": 0
+},
+{
+    "question": "Marcarea conductorului neutru care asigură simultan și funcția de protecție (PEN) se face:",
+    "answers": [
+        "Cu culoarea bleu pe toată lungimea",
+        "Prin culori verde/galben pe toată lungimea",
+        "Prin culori verde/galben pe toată lungimea și suplimentar marcarea bleu la fiecare extremitate"
+    ],
+    "correct": 2
+},
+{
+    "question": "Marcarea conductorului neutru (N) se face:",
+    "answers": [
+        "Cu culoarea bleu pe toată lungimea",
+        "Prin culori verde/galben pe toată lungimea",
+        "Cu culoarea bleu la fiecare extremitate"
+    ],
+    "correct": 0
+},
+{
+    "question": "La circuitele electrice de comandă, automatizare, măsurare și semnalizare:",
+    "answers": [
+        "Se prevăd numai conductoare din aluminiu",
+        "Se prevăd numai conductoare din cupru",
+        "Se prevăd conductoare din aluminiu sau cupru"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conform normativului 1-7-2011, protecția de bază reprezintă:",
+    "answers": [
+        "Protecția împotriva atingerilor indirecte",
+        "Protecția împotriva stingerilor indirecte",
+        "Protecția împotriva șocurilor electrice în caz de defect"
+    ],
+    "correct": 0
+},
+{
+    "question": "Conform normativului 1-7-2011, o coloană electrică este un circuit electric care:",
+    "answers": [
+        "Alimentează un tablou de distribuție",
+        "Alimentează un receptor de putere",
+        "Alimentează mai multe surse de iluminat"
+    ],
+    "correct": 0
+},
+{
+    "question": "Conform normativului 1-7-2011, o coloană electrică este un circuit electric care:",
+    "answers": [
+        "Alimentează mai multe surse de iluminat",
+        "Alimentează un receptor de putere",
+        "Alimentează mai multe tablouri de distribuție"
+    ],
+    "correct": 2
+},
+{
+    "question": "În cazul instalațiilor electrice de joasă tensiune, izolația de bază reprezintă:",
+    "answers": [
+        "Izolația care asigură protecția de bază",
+        "Izolația care asigură protecția de defect",
+        "Izolația maselor"
+    ],
+    "correct": 0
+},
+{
+    "question": "În cazul instalațiilor electrice de joasă tensiune, izolația de bază reprezintă:",
+    "answers": [
+        "Izolația care asigură protecția de bază",
+        "Izolația părților active periculoase",
+        "Izolația maselor"
+    ],
+    "correct": 1
+},
+{
+    "question": "Curentul de defect este definit în 1-7-2011 ca fiind:",
+    "answers": [
+        "Un curent electric care circulă ca urmare a unei suprasarcini",
+        "Un curent electric care circulă ca urmare a unui defect de izolație",
+        "Un curent electric care circulă trifazat ca urmare a unui scurtcircuit"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conform normativului 1-7-2011, protecția în caz de defect reprezintă:",
+    "answers": [
+        "O protecție împotriva șocurilor electrice în condiții de defect simplu",
+        "O protecție împotriva șocurilor electrice în condiții de scurtcircuit",
+        "Protecția care corespunde protecției împotriva atingerilor directe"
+    ],
+    "correct": 0
+},
+{
+    "question": "Atunci când un echipament nu conține, prin construcție, caracteristici corespunzătoare influențelor externe ale locului (sau amplasamentului):",
+    "answers": [
+        "El nu poate fi utilizat în instalația electrică",
+        "El poate fi totuși utilizat, cu condiția ca instalația să fie montată în tub",
+        "El poate fi totuși utilizat cu condiția să fie prevăzut cu o protecție suplimentară corespunzătoare la realizarea instalației"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conform normativului 1-7-2011, alimentarea de securitate la un consumator este o alimentare prevăzută pentru menținerea în funcțiune a echipamentelor și instalațiilor electrice importante pentru:",
+    "answers": [
+        "Sănătatea și securitatea persoanelor și a animalelor domestice",
+        "Continuarea activității productive a principalelor instalații tehnologice ale consumatorului respectiv",
+        "Continuarea activității productive a instalațiilor tehnologice ale consumatorului respectiv"
+    ],
+    "correct": 0
+},
+{
+    "question": "Pentru instalațiile electrice de iluminat și putere (forță):",
+    "answers": [
+        "Se prevede întotdeauna tablou electric de distribuție comun",
+        "Se prevăd întotdeauna tablouri electrice de distribuție diferite",
+        "Se prevede tablou electric de distribuție comun, cu unele excepții"
+    ],
+    "correct": 2
+},
+{
+    "question": "În funcție de dispunerea conductorului neutru și a conductorului de protecție rețelele de tip TN se pot realiza în:",
+    "answers": [
+        "Schema TN-S",
+        "Schema TN-C-S-C",
+        "Schema TN-S-C"
+    ],
+    "correct": 0
+},
+{
+    "question": "În funcție de dispunerea conductorului neutru și a conductorului de protecție rețelele de tip TN se pot realiza în:",
+    "answers": [
+        "Schema TN-C-S-C",
+        "Schema TN-C",
+        "Schema TN-S-C"
+    ],
+    "correct": 1
+},
+{
+    "question": "Rezistența prizei de pământ folosite pentru protecția împotriva șocurilor electrice, atunci când aceasta este comună cu priza de pământ pentru instalația de protecție a clădirii împotriva trăsnetelor, poate fi:",
+    "answers": [
+        "Cel mult 1 Ω",
+        "Cel mult 4 Ω",
+        "Cel mult 10 Ω"
+    ],
+    "correct": 1
+},
+{
+    "question": "La bateriile de condensatoare de joasă tensiune fracționabile cu trepte comutabile se prevăd dispozitive de descărcare:",
+    "answers": [
+        "Manuală",
+        "Automată",
+        "Manuală sau automată"
+    ],
+    "correct": 1
+},
+{
+    "question": "Condensatoarele legate direct la bornele receptoarelor de joasă tensiune:",
+    "answers": [
+        "Nu se prevăd cu dispozitive speciale de descărcare",
+        "Se prevăd cu dispozitive speciale de descărcare",
+        "Se prevăd cu dispozitive speciale de descărcare în anumite situații"
+    ],
+    "correct": 1
+},
+{
+    "question": "În rețelele în care funcțiunile de conductor de protecție și de conductor neutru sunt îndeplinite de un singur conductor (PEN)",
+    "answers": [
+        "Porțiunea comună trebuie să nu se găsească în aval de un dispozitiv de protecție la curent diferențial rezidual",
+        "Porțiunea comună se poate găsi în aval de un dispozitiv de protecție la curent diferențial rezidual, dacă rețeaua este de tip TN",
+        "Porțiunea comună se poate găsi în aval de un dispozitiv de protecție la curent diferențial rezidual, dacă rețeaua este de tip TT"
+    ],
+    "correct": 0
+},
+{
+    "question": "Secțiunea conductorului PEN trebuie să fie cel puțin egală cu",
+    "answers": [
+        "10 mm² Cu sau Al",
+        "6 mm² Cu sau 10 mm² Al",
+        "10 mm² Cu sau 16 mm² Al"
+    ],
+    "correct": 2
+},
+{
+    "question": "Atunci când secțiunea conductorului neutru este cel puțin egală sau echivalentă cu a conductorului de fază,",
+    "answers": [
+        "Nu este necesar să se prevadă o protecție de supracurent pe conductorul neutru dacă rețeaua este de tip TN",
+        "Este necesar să se prevadă o protecție de supracurent pe conductorul neutru dacă rețeaua este de tip TT",
+        "Nu este cazul să se prevadă o protecție de supracurent pe conductorul neutru dacă rețeaua este de tip IT"
+    ],
+    "correct": 1
+},
+{
+    "question": "Într-o rețea de tip TN, atunci când secțiunea conductorului neutru este mai mică decât cea a conductorului de fază,",
+    "answers": [
+        "Este necesar să se prevadă o protecție de supracurent pe conductorul neutru",
+        "Este necesar să se prevadă o protecție de supracurent pe conductorul neutru, corespunzătoare secțiunii acestui conductor",
+        "Nu este necesar să se prevadă o protecție de supracurent pe conductorul neutru"
+    ],
+    "correct": 1
+},
+{
+    "question": "Protecția de supracurent prevăzută pe conductorul neutru trebuie să producă deconectarea:",
+    "answers": [
+        "Conductorului de fază",
+        "Conductorului neutru, numai dacă este o rețea TT",
+        "Conductorului neutru, numai dacă este o rețea TN"
+    ],
+    "correct": 1
+},
+{
+    "question": "Instalarea prizelor în depozitele cu materiale combustibile categoria BE2:",
+    "answers": [
+        "Nu se admite",
+        "Se admite",
+        "Se admite condiționat"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conform prevederilor 17-2011, alegerea secțiunii conductoarelor și barelor din interiorul unui tablou este responsabilitatea:",
+    "answers": [
+        "Proiectantului instalației electrice",
+        "Producătorului",
+        "Verificatorului de proiect"
+    ],
+    "correct": 0
+},
+{
+    "question": "Dacă de la orice punct al unei instalații funcțiile de conductor neutru (N) și de conductor de protecție (PE) sunt asigurate prin conductoare separate,",
+    "answers": [
+        "Este permis să se conecteze conductorul neutru la orice altă parte a instalației legată la pământ",
+        "Este permis să se conecteze conductorul neutru la orice altă parte a instalației legată la pământ în anumite situații",
+        "Nu este permis să se conecteze conductorul neutru la orice altă parte a instalației legată la pământ"
+    ],
+    "correct": 2
+},
+{
+    "question": "Dacă de la orice punct al unei instalații funcțiile de conductor neutru (N) și de conductor de protecție (PE) sunt asigurate prin conductoare separate,",
+    "answers": [
+        "Se prevede bornă sau bară comună pentru conductoarele de neutru și respectiv conductoarele de protecție",
+        "Se prevăd borne sau bare separate pentru conductoarele de neutru și respectiv conductoarele de protecție",
+        "Se prevăd borne sau bare separate pentru conductoarele de neutru și respectiv conductoarele de protecție, în anumite situații"
+    ],
+    "correct": 1
+},
+{
+    "question": "Izolația dublă este:",
+    "answers": [
+        "Izolație realizată prin utilizarea împreună a unei izolații de bază și a unei izolații suplimentare",
+        "Izolația părților active periculoase care asigură un grad de protecție împotriva șocurilor electrice, echivalent celui unei izolații duble",
+        "Izolația independentă prevăzută suplimentar față de izolația de bază, pentru protecție în caz de defect"
+    ],
+    "correct": 0
+},
+{
+    "question": "Izolația întărită este:",
+    "answers": [
+        "Izolație realizată prin utilizarea împreună a unei izolații de bază și a unei izolații suplimentare",
+        "Izolația părților active periculoase care asigură un grad de protecție împotriva șocurilor electrice, echivalent celui unei izolații duble",
+        "Izolația independentă prevăzută suplimentar față de izolația de bază, pentru protecție în caz de defect"
+    ],
+    "correct": 0
+},
+{
+    "question": "Utilizarea dispozitivelor de curent diferențial rezidual DDR reprezintă:",
+    "answers": [
+        "O măsură tehnică de protecție pentru protecția de bază",
+        "O măsură tehnică principală de protecție pentru protecția de defect",
+        "O măsură tehnică suplimentară"
+    ],
+    "correct": 2
+},
+{
+    "question": "În cazul unei clădiri alimentate dintr-un post de transformare, între priza de pământ a clădirii și priza de pământ a postului de transformare trebuie să fie o distanță de:",
+    "answers": [
+        "Cel mult 1000 m",
+        "Cel puțin 70 m",
+        "Cel puțin 40 m"
+    ],
+    "correct": 1
+},
+{
+    "question": "În cazul unei clădiri alimentate dintr-un post de transformare:",
+    "answers": [
+        "Se prevăd întotdeauna prize de pământ separate, la clădire și la postul de transformare",
+        "În anumite situații se prevede o priză de pământ comună cu rezistență de cel mult 10 Ω",
+        "În anumite situații se prevede o priză de pământ comună cu rezistență de cel mult 4 Ω"
+    ],
+    "correct": 1
+},
+{
+    "question": "Montarea în contact direct cu materiale combustibile se admite:",
+    "answers": [
+        "Pentru cabluri cu izolație din PVC",
+        "Pentru toate tuburile și plintele din materiale plastice",
+        "Pentru cabluri cu întârziere la propagarea flăcării"
+    ],
+    "correct": 2
+},
+{
+    "question": "Montarea în contact direct cu materiale combustibile se admite:",
+    "answers": [
+        "Pentru toate tuburile și plintele din materiale plastice",
+        "Pentru cabluri rezistente la foc",
+        "Pentru cabluri cu izolație din PVC"
+    ],
+    "correct": 1
+},
+{
+    "question": "Prizele cu tensiunea de 230 V care se montează într-o instalație electrică trebuie să fie întotdeauna:",
+    "answers": [
+        "În construcție capsulată",
+        "Cu contact de protecție",
+        "În execuție sau tunel"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conform 17/2011, conductor de protecție (PE) este:",
+    "answers": [
+        "Un conductor prevăzut în liniile aeriene de joasă tensiune pentru protecția împotriva loviturilor de trăsnet",
+        "Un conductor prevăzut în scopuri de securitate, de exemplu protecția împotriva șocurilor electrice",
+        "Nu există conductor de protecție în instalațiile de joasă tensiune"
+    ],
+    "correct": 1
+},
+{
+    "question": "Separarea de protecție este o separare între două circuite electrice prin intermediul:",
+    "answers": [
+        "Unei izolații de bază",
+        "Unei protecții electrice printr-un transformator",
+        "Unei izolații duble"
+    ],
+    "correct": 1
+},
+{
+    "question": "Separarea de protecție este o separare între două circuite electrice prin intermediul:",
+    "answers": [
+        "Unei izolații întărite",
+        "Unei protecții electrice printr-un transformator",
+        "Unei izolații de bază"
+    ],
+    "correct": 1
+},
+{
+    "question": "Legarea la pământ reprezintă realizarea unei legături electrice:",
+    "answers": [
+        "Numai între un punct dat al unui echipament și un pământ local",
+        "Numai între un punct dat al unei rețele și un pământ local",
+        "Între un punct dat al unei rețele sau al unui echipament și un pământ local"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conductoarele, barele, tuburile etc.",
+    "answers": [
+        "Nu se pot dispune pe trasee comune cu traseele altor instalații",
+        "Se pot dispune pe trasee comune cu traseele altor instalații cu îndeplinirea unor condiții",
+        "Se pot dispune pe trasee comune cu traseele altor instalații, fără alte condiții, dacă sunt în montaj aparent"
+    ],
+    "correct": 1
+},
+{
+    "question": "În România tensiunea nominală de joasă tensiune asigurată de rețeaua de distribuție publică",
+    "answers": [
+        "Este monofazată 230 V și trifazată 400/230V, în sistem TN-S",
+        "Este monofazată 400 V și trifazată 690 V, în sistem TN-C",
+        "Este monofazată 230 V și trifazată 400/230V, în sistem TN-C"
+    ],
+    "correct": 2
+},
+{
+    "question": "Utilizarea conductelor metalice pentru gaze și/sau lichide inflamabile drept conductoare de protecție:",
+    "answers": [
+        "Este recomandată",
+        "Este permisă condiționat",
+        "Nu este permisă"
+    ],
+    "correct": 2
+},
+{
+    "question": "Dacă instalațiile electrice sunt în distribuție prefabricată în învelişuri metalice (cutii, carcase), aceste învelişuri",
+    "answers": [
+        "Pot fi utilizate drept conductoare de protecție, în anumite condiții",
+        "Nu pot fi utilizate drept conductoare de protecție",
+        "Pot fi utilizate întotdeauna drept conductoare de protecție"
+    ],
+    "correct": 0
+},
+{
+    "question": "Utilizarea unei singure culori pentru toate conductoarele de fază ale unui circuit",
+    "answers": [
+        "Este interzisă",
+        "Este permisă, cu marcări corespunzătoare la cele două extremități",
+        "Este permisă dacă nu se foloseşte una dintre culorile verde sau galben"
+    ],
+    "correct": 1
+},
+{
+    "question": "Tipurile de rețele în funcție de modul de legare la pământ pentru tensiune alternativă sunt:",
+    "answers": [
+        "TN, TT, IT",
+        "TN, TI, IT",
+        "TT, IT, TI"
+    ],
+    "correct": 1
+},
+{
+    "question": "Într-o rețea TN, punerea la masă a unei faze",
+    "answers": [
+        "Nu conduce la apariția unui curent de defect",
+        "Conduce la apariția unui curent de defect",
+        "Conduce la apariția unui curent de defect trecător"
+    ],
+    "correct": 1
+},
+{
+    "question": "În toate rețelele TN, atunci când există un conductor PE sau PEN, acestea, când fac parte din componența tablourilor de distribuție",
+    "answers": [
+        "Trebuie legate la pământ numai dacă rezistența de dispersie a rețelei de legare la pământ este 4 Ω",
+        "Pot fi sau nu legate la pământ",
+        "Trebuie legate la pământ obligatoriu"
+    ],
+    "correct": 2
+},
+{
+    "question": "Pe circuitele de alimentare ale dispozitivelor de stingere a incendiilor.",
+    "answers": [
+        "Se recomandă să nu se prevadă protecția la suprasarcină",
+        "Se recomandă să se prevadă protecția la suprasarcină",
+        "Este obligatoriu să se prevadă protecția la suprasarcină"
+    ],
+    "correct": 2
+},
+{
+    "question": "Pe circuitele de alimentare ale dispozitivelor de stingere a incendiilor.",
+    "answers": [
+        "Se permite renunțarea la protecția la scurtcircuit",
+        "Este obligatoriu să se prevadă protecția la scurtcircuit",
+        "În norme nu sunt prevederi speciale pentru protecția la scurtcircuit a circuitelor de acest tip"
+    ],
+    "correct": 1
+},
+{
+    "question": "Atunci când un dispozitiv de protecție trebuie să deconecteze toate conductoarele active din circuitul corespondent,",
+    "answers": [
+        "Conductorul neutru trebuie să fie deconectat înaintea conductoarelor de fază",
+        "Conductorul neutru trebuie să fie deconectat simultan cu conductoarele de fază",
+        "Conductorul neutru nu trebuie să fie deconectat înaintea conductoarelor de fază"
+    ],
+    "correct": 1
+},
+{
+    "question": "În instalațiile electrice ale construcțiilor se utilizează oțelul sub formă de:",
+    "answers": [
+        "Tuburi și țevi metalice",
+        "Conductoare izolate",
+        "Conductoare neizolate"
+    ],
+    "correct": 2
+},
+{
+    "question": "Tuburile și țevile metalice",
+    "answers": [
+        "Nu se pot monta direct pe elementele de construcție din materiale combustibile",
+        "Se pot monta direct pe elementele de construcție din materiale combustibile, condiționat",
+        "Se pot monta direct pe elementele de construcție din materiale combustibile"
+    ],
+    "correct": 1
+},
+{
+    "question": "Dozele de derivație se instalează",
+    "answers": [
+        "Numai pe suprafețele verticale ale elementelor de construcții",
+        "Cu prioritate pe suprafețele verticale ale elementelor de construcții",
+        "Pe orice suprafață, indiferent de tipul dozei"
+    ],
+    "correct": 1
+},
+{
+    "question": "La consumatorii alimentați din surse proprii de energie electrică, puterea motoarelor care pot fi pornite direct se determină pe bază de calcul,",
+    "answers": [
+        "Verificându-se satisfacerea condiției de cădere de tensiune admisă",
+        "Dar nu se va depăși 20% din puterea instalată a sursei",
+        "Dar nu se va depăși 10% din puterea instalată a sursei"
+    ],
+    "correct": 1
+},
+{
+    "question": "În fiecare instalație la nivelul tabloului general trebuie prevăzută",
+    "answers": [
+        "O bornă/bară principală de legare la pământ, numai atunci când rețeaua de distribuție este TN-C",
+        "O bornă/bară principală de legare la pământ",
+        "O bornă/bară principală de legare la pământ, numai în cazul în care alimentarea receptoarelor se face în sistem TN-S"
+    ],
+    "correct": 1
+},
+{
+    "question": "Circuitele iluminatului normal",
+    "answers": [
+        "Trebuie să fie distincte de circuitele de prize",
+        "Poate fi un circuit comun pentru iluminat normal și prize dacă puterea totală instalată pe circuit nu depășește 2 kW",
+        "Poate fi un circuit comun pentru iluminat normal și prize dacă puterea totală instalată pe circuit nu depășește 1 kW pe un circuit monofazat și 8 kW pe un circuit trifazat"
+    ],
+    "correct": 2
+},
+{
+    "question": "Rezistența prizei de pământ a unei clădiri, atunci când este folosită numai pentru protecția împotriva șocurilor electrice, trebuie să fie cel mult",
+    "answers": [
+        "10 Ω",
+        "4 Ω",
+        "1 Ω"
+    ],
+    "correct": 1
+},
+{
+    "question": "Atunci când între priza de pământ a clădirii și priza de pământ a postului de transformare (ce alimentează clădirea) este o distanță mai mică decât cea prevăzută de norme, se prevede o priză de pământ comună cu rezistență de cel mult",
+    "answers": [
+        "10 Ω",
+        "4 Ω",
+        "1 Ω"
+    ],
+    "correct": 1
+},
+{
+    "question": "Rețeaua electrică a operatorului de transport/distribuție",
+    "answers": [
+        "Constituie două surse de alimentare pentru locul de consum respectiv, dacă acesta este racordat printr-un post de transformare alimentat din două stații de transformare, echipat cu două transformatoare și instalație de AAR",
+        "Constituie două surse de alimentare pentru locul de consum respectiv, dacă acesta este racordat printr-un post de transformare echipat cu două transformatoare și instalație de AAR",
+        "Constituie o singură sursă de alimentare (SEN) pentru locul de consum respectiv, indiferent de numărul de instalații electrice prin care este racordat"
+    ],
+    "correct": 1
+},
+{
+    "question": "Pe un circuit care alimentează mai multe receptoare electrice de putere de aceeași natură și destinație",
+    "answers": [
+        "Nu se prevede protecție comună la scurtcircuit",
+        "Nu se prevede protecție comună la suprasarcină",
+        "Se prevede protecție la suprasarcină dacă puterea totală instalată a acestor receptoare depășește 16 kW"
+    ],
+    "correct": 2
+},
+{
+    "question": "Rețeaua generală a conductoarelor principale de legare la pământ de protecție din instalațiile electrice pentru șantiere de construcții și de demolare",
+    "answers": [
+        "Se realizează buclat în toate cazurile, în care acest lucru este posibil",
+        "Se realizează buclat în toate cazurile",
+        "Se realizează radial, pentru reducerea consumului de materiale"
+    ],
+    "correct": 0
+},
+{
+    "question": "Rețeaua generală de protecție din instalațiile electrice pentru șantiere de construcții și de demolare, care se execută ramificat, se leagă la toate capetele de linie și la punctele de ramificație la câte o priză de pământ",
+    "answers": [
+        "Cel mult 1 Ω",
+        "1 Ω",
+        "4 Ω"
+    ],
+    "correct": 2
+},
+{
+    "question": "Protecția motoarelor trifazate la suprasarcină se realizează cu un dispozitiv dependent de curent, cu temporizare, care monitorizează toate cele trei faze, reglat la",
+    "answers": [
+        "Cel mult 0.8 din valoarea curentului nominal al motorului",
+        "Cel mult valoarea curentului nominal al motorului",
+        "Cel mult 0.9 din valoarea curentului nominal al motorului"
+    ],
+    "correct": 1
+},
+{
+    "question": "Dispozitivul de protecție la suprasarcină a motoarelor trifazate va acționa în 2 ore sau mai puțin la o valoare",
+    "answers": [
+        "Egală cu a curentului reglat",
+        "De 1.05 ori curentul reglat",
+        "De 1.20 ori curentul reglat"
+    ],
+    "correct": 2
+},
+{
+    "question": "Dispozitivul de protecție la suprasarcini a motoarelor trifazate nu va acționa într-un interval de 2 ore la o valoare",
+    "answers": [
+        "De 1.05 ori curentul reglat",
+        "De 1.25 ori curentul reglat",
+        "De 1.20 ori curentul reglat"
+    ],
+    "correct": 0
+},
+{
+    "question": "În instalațiile electrice ale consumatorilor pentru îmbunătățirea factorului de putere, se utilizează",
+    "answers": [
+        "Condensatoarele derivație",
+        "Condensatoarele serie fixe",
+        "Condensatoarele serie reglabile în trepte"
+    ],
+    "correct": 0
+},
+{
+    "question": "Compensarea locală (individuală) a energiei reactive consumate se prevede",
+    "answers": [
+        "Numai pentru receptoare inductive cu consum mare de putere reactivă și cu funcționare continuă",
+        "Numai pentru receptoare de putere foarte mică, dar aflate în număr foarte mare",
+        "Pentru receptoare inductive cu consum mare de putere reactivă și cu funcționare continuă și pentru cele de putere foarte mică, dar aflate în număr foarte mare"
+    ],
+    "correct": 2
+},
+{
+    "question": "Dacă circuitul unei baterii de condensatoare se protejează cu întreruptor automat (disjunctor) acesta se reglează pentru protecție la suprasarcină la",
+    "answers": [
+        "Curentul nominal al bateriei",
+        "1.5 ori curentul nominal al bateriei",
+        "1.2 ori curentul nominal al bateriei"
+    ],
+    "correct": 1
+},
+{
+    "question": "Conductorul neutru (N):",
+    "answers": [
+        "Este un conductor conectat electric la punctul neutru al sursei și care poate contribui la distribuția energiei electrice",
+        "Este un conductor conectat electric la punctul neutru al sursei și care contribuie la protecția contra atingerilor indirecte",
+        "Este un conductor conectat electric la punctul neutru al sursei și care contribuie la distribuția energiei electrice și la protecția contra atingerilor indirecte"
+    ],
+    "correct": 2
+},
+{
+    "question": "Protecția de bază (protecția împotriva atingerilor directe) se realizează:",
+    "answers": [
+        "Numai prin măsuri administrative",
+        "Prin măsuri tehnice și/sau organizatorice",
+        "Numai prin măsuri tehnice"
+    ],
+    "correct": 1
+},
+{
+    "question": "Curentul admisibil este:",
+    "answers": [
+        "Valoarea maximă a curentului electric care poate parcurge în permanență un conductor, un dispozitiv sau un aparat, fără ca temperatura sa în regim permanent, în condiții date, să fie superioară valorii specificate",
+        "Valoarea maximă a curentului electric care poate parcurge un conductor, un dispozitiv sau un aparat, fără ca temperatura sa în regim de scurtcircuit să fie superioară valorii specificate",
+        "Valoarea maximă a curentului electric care poate parcurge în permanență un conductor, un dispozitiv sau un aparat, fără ca temperatura sa în condițiile unei puneri la pământ, să fie superioară valorii specificate"
+    ],
+    "correct": 0
+},
+{
+    "question": "Curent nominal este un",
+    "answers": [
+        "Curent electric destinat a fi transportat de un circuit în funcționarea în regim de defect simplu un timp limitat",
+        "Curent electric destinat a fi transportat de un circuit în funcționarea în regim de scurtcircuit un timp limitat",
+        "Curent electric destinat a fi transportat de un circuit în funcționarea normală pe timp nelimitat"
+    ],
+    "correct": 2
+},
+{
+    "question": "Părțile conductoare străine",
+    "answers": [
+        "Pot fi utilizate drept conductoare PEN în tensiune alternativă",
+        "Pot fi utilizate, în anumite condiții, drept conductoare PEN în tensiune alternativă",
+        "Nu trebuie utilizate drept conductoare PEN în tensiune alternativă"
+    ],
+    "correct": 2
+},
+{
+    "question": "Priza de pământ independentă este o priză de pământ",
+    "answers": [
+        "Care nu face parte dintr-o instalație de legare la pământ",
+        "Suficient de îndepărtată de alte prize de pământ pentru ca potențialul său electric să nu fie semnificativ afectat de curenții electrici între pământ și alte prize de pământ",
+        "Care nu face parte dintr-o rețea de prize de pământ"
+    ],
+    "correct": 1
+},
+{
+    "question": "Priza de pământ este o",
+    "answers": [
+        "Parte conductoare încorporată obligatoriu în pământ",
+        "Parte conductoare care poate fi încorporată într-un mediu conductor specific, de exemplu beton sau cărbune, izolat față de pământ",
+        "Parte conductoare care poate fi încorporată în pământ sau într-un mediu conductor specific, de exemplu beton sau cărbune, în contact cu pământul"
+    ],
+    "correct": 2
+},
+{
+    "question": "Conform normativului 17-2011, prin Pământ de referință se înțelege",
+    "answers": [
+        "O parte a Pământului în contact electric cu o priză de pământ independentă",
+        "O parte a Pământului în contact electric cu o instalație de legare la pământ",
+        "O parte a Pământului considerată conductoare, al cărei potențial electric prin convenție este considerat egal cu zero, care este în afara zonei de influență a oricărei instalații de legare la pământ"
+    ],
+    "correct": 2
+},
+{
+    "question": "Folosirea mijloacelor individuale de protecție electroizolante certificate",
+    "answers": [
+        "Este o măsură tehnică pentru protecția de bază (la atingere directă)",
+        "Este o măsură tehnică principală pentru protecția în caz de defect (protecția la atingere indirectă)",
+        "Este o măsură administrativă pentru protecția de bază (la atingere directă)"
+    ],
+    "correct": 1
+},
+{
+    "question": "Scoaterea de sub tensiune a instalației la care se lucrează",
+    "answers": [
+        "Este o măsură tehnică pentru protecția de bază (la atingere directă)",
+        "Este o măsură organizatorică pentru protecția de bază (la atingere directă)",
+        "Este o măsură tehnică principală pentru protecția în caz de defect (protecția la atingere indirectă)"
+    ],
+    "correct": 1
+},
+{
+    "question": "Dacă tensiunea nominală a rețelei este sub 500V în tensiune alternativă și tensiune continuă, „Mediu neconductor” reprezintă un spațiu în care o persoană sau un animal care atinge o parte conductoare accesibilă care a devenit o parte activă periculoasă, este protejată printr-o impedanță ridicată a mediului său (de exemplu pereți sau pardoseli electroizolante) de cel puțin",
+    "answers": [
+        "20 kΩ",
+        "30 kΩ",
+        "100 kΩ"
+    ],
+    "correct": 2
+},
+{
+    "question": "Limitarea tensiunii de alimentare, care să nu depășească limitele TFI (conform recomandărilor din SR CEI/TS 61201)",
+    "answers": [
+        "Este o măsură tehnică pentru protecția de bază (la atingere directă)",
+        "Este o măsură organizatorică pentru protecția de bază (la atingere directă)",
+        "Este o măsură tehnică suplimentară pentru protecția în caz de defect (protecția la atingere indirectă)"
+    ],
+    "correct": 0
+},
+{
+    "question": "Izolarea dublă sau întărită a echipamentelor electrice - clasa II de izolație",
+    "answers": [
+        "Este o măsură tehnică suplimentară pentru protecția în caz de defect (protecția la atingere indirectă)",
+        "Este o măsură tehnică principală pentru protecția în caz de defect (protecția la atingere indirectă)",
+        "Este o măsură organizatorică pentru protecția în caz de defect (protecția la atingere indirectă)"
+    ],
+    "correct": 1
+},
+{
+    "question": "Separarea simplă este",
+    "answers": [
+        "O separare între circuitele electrice sau între un circuit electric și pământul local printr-o izolație dublă",
+        "O separare între circuitele electrice sau între un circuit electric și pământul local printr-o izolație întărită",
+        "O separare între circuitele electrice sau între un circuit electric și pământul local printr-o izolație de bază"
+    ],
+    "correct": 2
+},
+{
+    "question": "Tensiunea de defect este",
+    "answers": [
+        "Tensiunea între un punct de defect și pământul de referință, ca urmare a unui defect de izolație",
+        "Tensiunea între un punct de defect și pământ, ca urmare a unui defect de izolație",
+        "Tensiunea între un punct de defect și o parte conductoare accesibilă"
+    ],
+    "correct": 0
+},
+{
+    "question": "Abrevierea TN-C înseamnă",
+    "answers": [
+        "Rețea cu punctul neutru al transformatorului legat la pământ și masele legate la prize de pământ independente",
+        "Rețea cu punctul neutru al transformatorului legat la pământ și conductor cu funcții comune de protecție și neutru",
+        "Rețea cu punctul neutru al transformatorului legat la pământ și conductoare distincte pentru funcțiile de protecție și neutru"
+    ],
+    "correct": 1
+},
+{
+    "question": "Abrevierea TN-S înseamnă",
+    "answers": [
+        "Rețea cu punctul neutru al transformatorului legat la pământ și conductor cu funcții comune: de protecție și neutru",
+        "Rețea cu punctul neutru al transformatorului legat la pământ și masele legate la prize de pământ independente",
+        "Rețea cu punctul neutru al transformatorului legat la pământ și conductoare distincte pentru funcțiile de protecție și neutru"
+    ],
+    "correct": 2
+},
+{
+    "question": "Abrevierea TT înseamnă",
+    "answers": [
+        "Rețea cu punctul neutru al transformatorului legat la pământ și conductor cu funcții comune: de protecție și neutru",
+        "Rețea cu punctul neutru al transformatorului legat la pământ și masele legate la prize de pământ independente",
+        "Rețea cu punctul neutru al transformatorului legat la pământ și conductoare distincte pentru funcțiile de protecție și neutru"
+    ],
+    "correct": 1
+},
+{
+    "question": "Rezistența de izolație a pardoselii și pereților în fiecare punct de măsurare în condițiile specificate în SR EN 61140 și verificate printr-o metodă recomandată în Anexa B.1 din 17/2011, dacă tensiunea nominală a instalației nu depășește 500 V în tensiune continuă sau alternativă, trebuie să fie mai mare de",
+    "answers": [
+        "75 kΩ",
+        "50 kΩ",
+        "100 kΩ"
+    ],
+    "correct": 2
+}
+]

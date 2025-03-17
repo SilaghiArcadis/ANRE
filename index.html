@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Examen ANRE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,27 +12,31 @@
         <span>Corecte: <span id="good-count">0</span></span>
         <span>Timp: <span id="timer">00:00:00</span></span>
     </div>
-    
+
     <div class="container">
-        <button id="start-btn">începe examen ANRE </button>
+        <button id="chapter1-btn">Legislație</button>
+        <button id="chapter2-btn">Electrotehnică</button>
+        <button id="chapter3-btn">Norme tehnice</button>
+        <button id="start-btn">Test final ANRE</button>
+
         <div id="question-container" class="hidden">
             <div id="question"></div>
             <div id="image-container"></div>
             <div id="answers"></div>
         </div>
     </div>
+
     <div id="result-container" class="hidden">
-        <h1 id="result-title"></h1> <!-- ADMIS or RESPINS  -->
+        <h1 id="result-title"></h1>
         <p>Răspunsuri corecte: <span id="correct-count"></span></p>
         <p>Răspunsuri greșite: <span id="incorrect-count"></span></p>
         <p>Timp: <span id="total-time"></span></p>
         <button id="restart-btn">Restart</button>
-        <button id="review-btn" class="hidden">Răspunsuri gresite</button> <!-- Review button -->
+        <button id="review-btn" class="hidden">Răspunsuri greșite</button>
     </div>
+
     <div id="review-container" class="hidden">
-        <div id="review-answer"></div> <!-- Review answer content -->
-        
-        <!-- Navigation buttons container -->
+        <div id="review-answer"></div>
         <div id="nav-buttons">
             <button id="previous-btn">ÎNAPOI</button>
             <button id="next-btn">ÎNAINTE</button>
@@ -40,8 +44,9 @@
         </div>
     </div>
 
-        
-    <script src="questions.json"></script>
+    <script src="chapter1.json"></script>
+    <script src="chapter2.json"></script>
+    <script src="chapter3.json"></script>
     <script src="script.js" defer></script>
 </body>
 </html>

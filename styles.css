@@ -29,6 +29,13 @@ body, html {
     margin: 20px;
 }
 
+.container {
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically if the container has height */
+    /* Add any other existing styles for .container here */
+}
 /* ====== Start & Restart Buttons ====== */
 #start-btn, #restart-btn {
     padding: 15px 50px;
@@ -44,8 +51,50 @@ body, html {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 }
+#chapter1-btn {
+    padding: 15px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FFFF00, #FFA500);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+#chapter2-btn {
+    padding: 15px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00FF00, #008000);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+#chapter3-btn {
+    padding: 15px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #FF00FF, #4B0082);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 100px;
+}
 
-#start-btn:active, #restart-btn:active {
+#start-btn:active, #restart-btn:active,#chapter3-btn:active,#chapter2-btn:active,#chapter1-btn:active {
     transform: scale(0.95);
 }
 
