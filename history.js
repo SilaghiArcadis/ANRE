@@ -60,37 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         filterHistory(this.value);
     });
 
-    // Function to generate and save simulated data
-    function generateSimulatedData(count) {
-        let categories = ["Legislație", "Electrotehnică", "Norme tehnice", "Test final ANRE"];
-        for (let i = 0; i < count; i++) {
-            let category = categories[Math.floor(Math.random() * categories.length)];
-            let success = Math.random() < 0.7; // 70% chance of success
-            let correctCount = Math.floor(Math.random() * 25);
-            let wrongCount = Math.floor(Math.random() * 10);
-            let time = `${Math.floor(Math.random() * 2)}:${String(Math.floor(Math.random() * 60)).padStart(2, '0')}:${String(Math.floor(Math.random() * 60)).padStart(2, '0')}`;
-
-            let quizData = {
-                category: category,
-                success: success,
-                correctCount: correctCount,
-                wrongCount: wrongCount,
-                time: time
-            };
-
-            saveQuizHistory(quizData);
-        }
-    }
-
-    // Function to save quiz data to localStorage
-    function saveQuizHistory(quizData) {
-        let history = JSON.parse(localStorage.getItem("quizHistory")) || [];
-        history.push(quizData);
-        localStorage.setItem("quizHistory", JSON.stringify(history));
-    }
-
-    // Generate simulated data (e.g., 20 entries)
-    //generateSimulatedData(120);
+    
 
     // Clear History Button Logic
     document.getElementById("clear-history-btn").addEventListener("click", function() {
