@@ -15,7 +15,7 @@ let allQuestions = [];
 fetch("chapter1.json")
     .then(response => response.json())
     .then(data => {
-        chapter1Questions = shuffleArray(data).slice(0, 2);  // Pick 25 random questions
+        chapter1Questions = shuffleArray(data).slice(0, 25);  // Pick 25 random questions
     }) 
     .catch(error => console.error('Error fetching chapter1:', error));
 
