@@ -15,7 +15,7 @@ let allQuestions = [];
 fetch("chapter1.json")
     .then(response => response.json())
     .then(data => {
-        chapter1Questions = shuffleArray(data).slice(0, 25);  // Pick 25 random questions
+        chapter1Questions = shuffleArray(data).slice(0, 2);  // Pick 25 random questions
     }) 
     .catch(error => console.error('Error fetching chapter1:', error));
 
@@ -44,6 +44,9 @@ document.getElementById("chapter1-btn").addEventListener("click",() => startQuiz
 document.getElementById("chapter2-btn").addEventListener("click",() => startQuiz(chapter2Questions));
 document.getElementById("chapter3-btn").addEventListener("click",() => startQuiz(chapter3Questions));
 document.getElementById("start-btn").addEventListener("click",() => startQuiz(allQuestions));
+document.getElementById('history-button').addEventListener('click', function() {
+    window.location.href = 'history.html'; // Navigate to history.html
+});
 
 function startTimer() {
     startTime = new Date();
@@ -75,6 +78,7 @@ function startQuiz(selectedQuestions) {
     document.getElementById("chapter2-btn").classList.add("hidden");
     document.getElementById("chapter3-btn").classList.add("hidden");
     document.getElementById("start-btn").classList.add("hidden");
+    document.getElementById('history-button').classList.add('hidden');
     document.getElementById("floating-bar").classList.remove("hidden"); // Shows floating bar
 
     document.getElementById("question-container").classList.remove("hidden");
@@ -231,6 +235,18 @@ function showResults() {
     resultTitle.textContent = resultMessage;
     resultTitle.style.color = isAdmis ? "#4CAF50" : "#FF4C4C";
 
+    let success = correctCount >= 18;
+
+    let quizData = {
+        category: getCategoryName(),
+        success: success,
+        correctCount: correctCount,
+        wrongCount: wrongCount,
+        time: document.getElementById("timer").textContent
+    };
+
+    saveQuizHistory(quizData);
+
     document.getElementById("correct-count").textContent = correctCount;
     document.getElementById("incorrect-count").textContent = wrongCount;
     let totalTime = document.getElementById("timer").textContent;
@@ -243,6 +259,20 @@ function showResults() {
     if (wrongAnswers.length > 0) {
         document.getElementById("review-btn").classList.remove("hidden");
     }
+}
+
+function saveQuizHistory(quizData) {
+    let history = JSON.parse(localStorage.getItem("quizHistory")) || [];
+    history.push(quizData);
+    localStorage.setItem("quizHistory", JSON.stringify(history));
+}
+
+function getCategoryName() {
+    if(questions === chapter1Questions) return "Legislație";
+    if(questions === chapter2Questions) return "Electrotehnică";
+    if(questions === chapter3Questions) return "Norme tehnice";
+    if(questions === allQuestions) return "Test final ANRE";
+    return "Unknown Category";
 }
 
 // Review Wrong Answers

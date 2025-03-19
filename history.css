@@ -1,0 +1,227 @@
+/* history.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a52);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    overflow-y: auto;
+}
+
+#header-wrapper {
+    position: sticky; /* Or position: fixed; */
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: inherit;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#content-wrapper {
+    width: 100%;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 120px;
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    color: #f1f1f1; /* Light blue for a glowing effect */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 10px #0cce5a, 0 0 20px #0cc770, 0 0 30px #37d015; /* Glow effect */
+    padding: 10px 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td[style*="color: green;"] {
+    font-weight: bold;
+}
+
+td[style*="color: red;"] {
+    font-weight: bold;
+}
+table td:nth-child(2) { /* Category column */
+    padding: 0 0px; /* Reduced padding */
+    min-width: 120px; /* Slightly reduced min-width */
+    color: black;
+    font-weight: bold;
+    
+}
+
+#success-rate {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#clear-history-btn {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+#quiz-history {
+    text-align: center;
+    width: 100%; /* Ensure it takes full width */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 150px); /* Limit height, adjust 150px as needed */
+}
+
+
+
+/* Mobile-Friendly Adjustments for History Page */
+@media (max-width: 600px) {
+    body {
+        padding-top: 0; /* Remove body padding */
+    }
+
+    #header-wrapper {
+        display: block; /* Stack elements vertically */
+    }
+
+    #content-wrapper {
+        padding-top: 70px; /* Adjust padding to accommodate header */
+    }
+    #quiz-history {
+        max-height: calc(100vh - 0px); /* Adjust for mobile header */
+        margin-top: 0px; /* Adjust margin if needed */
+    }
+
+
+    select, #clear-history-btn {
+        width: auto; /* Allow content to dictate width */
+        padding: 8px 12px; /* Smaller padding */
+        margin: 5px auto; /* Smaller margins, center */
+        display: inline-block; /* Display inline to fit on one line */
+    }
+
+    /* Make select and clear history button on the same line */
+    #category-filter, #clear-history-btn {
+        display: inline-block;
+        vertical-align: middle; /* Align vertically */
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-top: 60px; /* Add margin to push table below header */
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody {
+        display: block;
+    }
+
+    table tbody tr {
+        display: block;
+        border: 1px solid #ddd;
+        margin-bottom: 5px; /* Reduced margin */
+        padding: 5px; /* Reduced padding */
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    table td {
+        display: inline-block;
+        border: none;
+        padding: 0 0px; /* Reduced padding */
+        text-align: center;
+        vertical-align: middle;
+        width: auto;
+        min-width: 40px; /* Slightly reduced min-width */
+    }
+
+    table td:nth-child(1) { /* Result column */
+        min-width: 20px;
+    }
+    table td:nth-child(2) { /* Category column */
+        padding: 0 0px; /* Reduced padding */
+        min-width: 120px; /* Slightly reduced min-width */
+        color: black;
+        font-weight: bold;
+        
+    }
+    table td:nth-child(3) { /* Result column */
+        min-width: 55px; /* Ensure enough space for "Respins" */
+    }
+   
+
+    table td:before {
+        display: none;
+    }
+    #clear-history-btn {
+        margin-left: auto; /* Keep right alignment */
+        margin-bottom: 20px;
+    }
+}

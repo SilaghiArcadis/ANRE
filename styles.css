@@ -93,8 +93,22 @@ body, html {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     margin-bottom: 100px;
 }
+#history-button {
+    padding: 15px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ec1010, #ea3b0b);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 50px;
+}
 
-#start-btn:active, #restart-btn:active,#chapter3-btn:active,#chapter2-btn:active,#chapter1-btn:active {
+#start-btn:active, #restart-btn:active,#chapter3-btn:active,#chapter2-btn:active,#chapter1-btn:active,#history-button:active {
     transform: scale(0.95);
 }
 
@@ -484,3 +498,7 @@ body, html {
         padding: 15px 0;
     }
 }
+
+
+
+
