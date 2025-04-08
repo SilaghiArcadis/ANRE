@@ -74,7 +74,7 @@ fetch("questions.json")
     
     function startQuiz(fullQuestionSet) {
         // Select a new set of 35 distinct random questions each time
-        const selectedQuestions = pickDistinctRandomQuestions(fullQuestionSet, 30);
+        const selectedQuestions = pickDistinctRandomQuestions(fullQuestionSet, 35);
         if (typeof selectedQuestions === 'string' && selectedQuestions.startsWith("Error")) {
             console.error(selectedQuestions);
             return; // Handle the error appropriately
