@@ -12,79 +12,92 @@ let chapter3Questions = [];
 let allQuestions = [];
 
 
+// Utility function to pick distinct random elements from an array
+function pickDistinctRandomQuestions(array, count) {
+    if (count > array.length) {
+        return "Error: Cannot pick more questions than available.";
+    }
+    const shuffled = [...array].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+}
+
 fetch("chapter1.json")
     .then(response => response.json())
     .then(data => {
-        chapter1Questions = shuffleArray(data).slice(0, 35);  // Pick 25 random questions
-    }) 
+        chapter1FullData = data; // Store the full dataset
+    })
     .catch(error => console.error('Error fetching chapter1:', error));
 
 fetch("chapter2.json")
     .then(response => response.json())
     .then(data => {
-        chapter2Questions = shuffleArray(data).slice(0, 35); // Pick 25 random questions
-    }) 
+        chapter2FullData = data; // Store the full dataset
+    })
     .catch(error => console.error('Error fetching chapter2:', error));
 
 fetch("chapter3.json")
     .then(response => response.json())
     .then(data => {
-        chapter3Questions = shuffleArray(data).slice(0, 35); // Pick 25 random questions
-    }) 
+        chapter3FullData = data; // Store the full dataset
+    })
     .catch(error => console.error('Error fetching chapter3:', error));
 
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        allQuestions = shuffleArray(data).slice(0, 35); // Pick 25 random questions
+        allFullData = data; // Store the full dataset
     })
     .catch(error => console.error('Error fetching questions:', error));
 
-document.getElementById("chapter1-btn").addEventListener("click",() => startQuiz(chapter1Questions));
-document.getElementById("chapter2-btn").addEventListener("click",() => startQuiz(chapter2Questions));
-document.getElementById("chapter3-btn").addEventListener("click",() => startQuiz(chapter3Questions));
-document.getElementById("start-btn").addEventListener("click",() => startQuiz(allQuestions));
-document.getElementById('history-button').addEventListener('click', function() {
-    window.location.href = 'history.html'; // Navigate to history.html
-});
 
-function startTimer() {
-    startTime = new Date();
-    timerInterval = setInterval(updateTimer, 1000);
-}
-
-
-
-function updateTimer() {
-    let elapsed = Math.floor((new Date() - startTime) / 1000);
-    let hours = String(Math.floor(elapsed / 3600)).padStart(2, "0");
-    let minutes = String(Math.floor((elapsed % 3600) / 60)).padStart(2, "0");
-    let seconds = String(elapsed % 60).padStart(2, "0");
-
-    document.getElementById("timer").textContent = `${hours}:${minutes}:${seconds}`;
-}
-
-function startQuiz(selectedQuestions) {
-    questions = selectedQuestions;
-    currentQuestionIndex = 0;
-    correctCount = 0;
-    wrongCount = 0;
-    startTime = new Date();
-    timerInterval = setInterval(updateTimer, 1000);
-    isAnswering = false;
-    wrongAnswers = [];
-
-    document.getElementById("chapter1-btn").classList.add("hidden");
-    document.getElementById("chapter2-btn").classList.add("hidden");
-    document.getElementById("chapter3-btn").classList.add("hidden");
-    document.getElementById("start-btn").classList.add("hidden");
-    document.getElementById('history-button').classList.add('hidden');
-    document.getElementById("floating-bar").classList.remove("hidden"); // Shows floating bar
-
-    document.getElementById("question-container").classList.remove("hidden");
-    displayQuestion();
-}
-
+    document.getElementById("chapter1-btn").addEventListener("click", () => startQuiz(chapter1FullData));
+    document.getElementById("chapter2-btn").addEventListener("click", () => startQuiz(chapter2FullData));
+    document.getElementById("chapter3-btn").addEventListener("click", () => startQuiz(chapter3FullData));
+    document.getElementById("start-btn").addEventListener("click", () => startQuiz(allFullData));
+    document.getElementById('history-button').addEventListener('click', function() {
+        window.location.href = 'history.html'; // Navigate to history.html
+    });
+    
+    function startTimer() {
+        startTime = new Date();
+        timerInterval = setInterval(updateTimer, 1000);
+    }
+    
+    function updateTimer() {
+        let elapsed = Math.floor((new Date() - startTime) / 1000);
+        let hours = String(Math.floor(elapsed / 3600)).padStart(2, "0");
+        let minutes = String(Math.floor((elapsed % 3600) / 60)).padStart(2, "0");
+        let seconds = String(elapsed % 60).padStart(2, "0");
+    
+        document.getElementById("timer").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    
+    function startQuiz(fullQuestionSet) {
+        // Select a new set of 35 distinct random questions each time
+        const selectedQuestions = pickDistinctRandomQuestions(fullQuestionSet, 30);
+        if (typeof selectedQuestions === 'string' && selectedQuestions.startsWith("Error")) {
+            console.error(selectedQuestions);
+            return; // Handle the error appropriately
+        }
+        questions = selectedQuestions;
+        currentQuestionIndex = 0;
+        correctCount = 0;
+        wrongCount = 0;
+        startTime = new Date();
+        timerInterval = setInterval(updateTimer, 1000);
+        isAnswering = false;
+        wrongAnswers = [];
+    
+        document.getElementById("chapter1-btn").classList.add("hidden");
+        document.getElementById("chapter2-btn").classList.add("hidden");
+        document.getElementById("chapter3-btn").classList.add("hidden");
+        document.getElementById("start-btn").classList.add("hidden");
+        document.getElementById('history-button').classList.add('hidden');
+        document.getElementById("floating-bar").classList.remove("hidden"); // Shows floating bar
+    
+        document.getElementById("question-container").classList.remove("hidden");
+        displayQuestion();
+    }
 function displayQuestion() {
     if (currentQuestionIndex >= questions.length) {
         showResults();
@@ -229,13 +242,13 @@ function showResults() {
     document.getElementById("question-container").classList.add("hidden");
     document.getElementById("floating-bar").classList.add("hidden"); // Hides the floating bar
 
-    let isAdmis = correctCount >= 18;
+    let isAdmis = correctCount >= 25;
     let resultMessage = isAdmis ? "ADMIS" : "RESPINS";
     let resultTitle = document.getElementById("result-title");
     resultTitle.textContent = resultMessage;
     resultTitle.style.color = isAdmis ? "#4CAF50" : "#FF4C4C";
 
-    let success = correctCount >= 18;
+    let success = correctCount >= 25;
 
     let quizData = {
         category: getCategoryName(),
