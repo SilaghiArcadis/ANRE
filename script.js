@@ -15,28 +15,28 @@ let allQuestions = [];
 fetch("chapter1.json")
     .then(response => response.json())
     .then(data => {
-        chapter1Questions = shuffleArray(data).slice(0, 25);  // Pick 25 random questions
+        chapter1Questions = shuffleArray(data).slice(0, 35);  // Pick 25 random questions
     }) 
     .catch(error => console.error('Error fetching chapter1:', error));
 
 fetch("chapter2.json")
     .then(response => response.json())
     .then(data => {
-        chapter2Questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+        chapter2Questions = shuffleArray(data).slice(0, 35); // Pick 25 random questions
     }) 
     .catch(error => console.error('Error fetching chapter2:', error));
 
 fetch("chapter3.json")
     .then(response => response.json())
     .then(data => {
-        chapter3Questions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+        chapter3Questions = shuffleArray(data).slice(0, 35); // Pick 25 random questions
     }) 
     .catch(error => console.error('Error fetching chapter3:', error));
 
 fetch("questions.json")
     .then(response => response.json())
     .then(data => {
-        allQuestions = shuffleArray(data).slice(0, 25); // Pick 25 random questions
+        allQuestions = shuffleArray(data).slice(0, 35); // Pick 25 random questions
     })
     .catch(error => console.error('Error fetching questions:', error));
 
