@@ -276,13 +276,13 @@ function showResults() {
     document.getElementById("question-container").classList.add("hidden");
     document.getElementById("floating-bar").classList.add("hidden"); // Hides the floating bar
 
-    let isAdmis = correctCount >= 25;
+    let isAdmis = correctCount >= 18;
     let resultMessage = isAdmis ? "ADMIS" : "RESPINS";
     let resultTitle = document.getElementById("result-title");
     resultTitle.textContent = resultMessage;
     resultTitle.style.color = isAdmis ? "#4CAF50" : "#FF4C4C";
 
-    let success = correctCount >= 25;
+    let success = correctCount >= 18;
 
     let quizData = {
         category: getCategoryName(),
