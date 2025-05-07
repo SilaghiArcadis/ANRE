@@ -50,10 +50,10 @@ fetch("questions.json")
     .catch(error => console.error('Error fetching questions:', error));
 
 
-    document.getElementById("chapter1-btn").addEventListener("click", () => startQuiz(chapter1FullData));
-    document.getElementById("chapter2-btn").addEventListener("click", () => startQuiz(chapter2FullData));
-    document.getElementById("chapter3-btn").addEventListener("click", () => startQuiz(chapter3FullData));
-    document.getElementById("start-btn").addEventListener("click", () => startQuiz(allFullData));
+    document.getElementById("chapter1-btn").addEventListener("click", () => startQuiz(chapter1FullData, "chapter1"));
+    document.getElementById("chapter2-btn").addEventListener("click", () => startQuiz(chapter2FullData, "chapter2"));
+    document.getElementById("chapter3-btn").addEventListener("click", () => startQuiz(chapter3FullData, "chapter3"));
+    document.getElementById("start-btn").addEventListener("click", () => startQuiz(allFullData, "all"));
     document.getElementById('history-button').addEventListener('click', function() {
         window.location.href = 'history.html'; // Navigate to history.html
     });
@@ -72,9 +72,43 @@ fetch("questions.json")
         document.getElementById("timer").textContent = `${hours}:${minutes}:${seconds}`;
     }
     
-    function startQuiz(fullQuestionSet) {
-        // Select a new set of 35 distinct random questions each time
-        const selectedQuestions = pickDistinctRandomQuestions(fullQuestionSet, 35);
+    function startQuiz(fullQuestionSet, categoryName) {
+        const numberOfQuestionsToPick = 30;
+        const seenQuestionsKey = `seenQuestions_${categoryName}`;
+        let seenQuestionIndices = JSON.parse(localStorage.getItem(seenQuestionsKey)) || [];
+        let unseenQuestions = fullQuestionSet.filter((_, index) => !seenQuestionIndices.includes(index));
+    
+        let selectedQuestions = [];
+    
+        if (unseenQuestions.length >= numberOfQuestionsToPick) {
+            // Pick distinct random unseen questions
+            const shuffledUnseenIndices = unseenQuestions.map((_, index) => index).sort(() => Math.random() - 0.5);
+            selectedQuestions = shuffledUnseenIndices.slice(0, numberOfQuestionsToPick).map(index => unseenQuestions[index]);
+    
+            // Update seen question indices
+            const newlySeenIndices = selectedQuestions.map(question => fullQuestionSet.indexOf(question));
+            seenQuestionIndices = [...new Set([...seenQuestionIndices, ...newlySeenIndices])];
+            localStorage.setItem(seenQuestionsKey, JSON.stringify(seenQuestionIndices));
+    
+        } else if (unseenQuestions.length > 0) {
+            // Not enough unseen questions, show the remaining unseen ones and then reset
+            selectedQuestions = unseenQuestions;
+            localStorage.removeItem(seenQuestionsKey); // Reset seen list
+            // Optionally, you could then pick randomly from the full set to reach numberOfQuestionsToPick
+            if (fullQuestionSet.length >= numberOfQuestionsToPick) {
+                const remainingToPick = numberOfQuestionsToPick - selectedQuestions.length;
+                const allShuffledIndices = fullQuestionSet.map((_, index) => index).sort(() => Math.random() - 0.5);
+                const additionalQuestions = allShuffledIndices.slice(0, remainingToPick).map(index => fullQuestionSet[index]);
+                selectedQuestions = [...selectedQuestions, ...additionalQuestions];
+            }
+    
+        } else {
+            // All questions have been seen, reset and pick randomly
+            localStorage.removeItem(seenQuestionsKey);
+            const allShuffledIndices = fullQuestionSet.map((_, index) => index).sort(() => Math.random() - 0.5);
+            selectedQuestions = allShuffledIndices.slice(0, numberOfQuestionsToPick).map(index => fullQuestionSet[index]);
+        }
+    
         if (typeof selectedQuestions === 'string' && selectedQuestions.startsWith("Error")) {
             console.error(selectedQuestions);
             return; // Handle the error appropriately
