@@ -183,7 +183,7 @@
     "question": "Măsurile pentru evitarea contactului direct cu materialul combustibil al echipamentelor electrice cu grad de protecție inferior IP54 se aplică:",
     "answers": [
         "Numai la montarea aparentă a elementelor de instalații electrice",
-        "La montarea sub tencuială a elementelor de instalații electrice",
+        "Numai la montarea sub tencuială a elementelor de instalații electrice",
         "Atât la montarea aparentă cât și la montarea îngropată"
     ],
     "correct": 2
@@ -436,7 +436,7 @@
     "answers": [
         "Izolarea tuturor părților active față de pământ, sau legarea la pământ a unui punct printr-o impedanță de valoare foarte mare",
         "Legarea directă la pământ a maselor instalației, independent de eventuala legare la pământ a unui punct al alimentării",
-        "Legarea directă la pământ a unui punct activ - .neutru, în cazul în care acesta este accesibil sau a unui conductor de fază, în cazul în care punctul neutru nu este accesibil"
+        "Legarea directă la pământ a unui punct activ - punctul neutru, în cazul în care acesta este accesibil sau a unui conductor de fază, în cazul în care punctul neutru nu este accesibil"
     ],
     "correct": 2
 },
@@ -445,7 +445,7 @@
     "answers": [
         "Izolarea tuturor părților active față de pământ, sau legarea la pământ a unui punct printr-o impedanță de valoare foarte mare",
         "Legarea directă la pământ a maselor instalației",
-        "Legarea directă la pământ a unui punct activ - .neutrul, în cazul în care acesta este accesibil sau a unui conductor de fază, în cazul în care neutrul nu este accesibil"
+        "Legarea directă la pământ a unui punct activ - neutrul, în cazul în care acesta este accesibil sau a unui conductor de fază, în cazul în care neutrul nu este accesibil"
     ],
     "correct": 1
 },
@@ -470,7 +470,7 @@
 {
     "question": "Rețeaua de tip IT se utilizează:",
     "answers": [
-        "Numai cu dispozitiv de control permanent al izolației conductorului neutru față de pământ și/sau va declanșa la primul defect",
+        "Numai cu dispozitiv de control permanent al izolației conductorului neutru față de pământ și/sau va declanșa in caz de defect",
         "Fără a fi necesară luarea unor măsuri anumite",
         "Utilizarea unui anumit tip de rețea (ca schemă de protecție) și eventual prevederea unor protecții sunt opțiuni ale proiectantului"
     ],
@@ -762,7 +762,7 @@
         "Se admite condiționat",
         "Este interzisă"
     ],
-    "correct": 2
+    "correct": 1
 },
 {
     "question": "Amplasarea instalațiilor electrice sub conducte sau utilaje pe care poate să apară condens:",
@@ -913,7 +913,7 @@
     "answers": [
         "Numai la curenți de suprasarcină",
         "Numai la curenți de scurtcircuit",
-        "Atât la curenți de suprasarcină și la curenți de scurtcircuit"
+        "Atât la curenți de suprasarcină cât și la curenți de scurtcircuit"
     ],
     "correct": 2
 },
@@ -929,7 +929,7 @@
 {
     "question": "În încăperi în care se impun condiții speciale de protecție datorită utilizatorilor (copii, bolnavi mintal etc.), prizele trebuie să fie",
     "answers": [
-        "De tip special (de ex. cu obturator)",
+        "De tip special (de ex. cu obturatori)",
         "De tip îngropat",
         "Montate aparent"
     ],
@@ -999,7 +999,7 @@
     "correct": 2
 },
 {
-    "question": "Prevederile normativului 17-2011 se aplică la proiectarea, execuția și exploatarea instalațiilor electrice aferente:",
+    "question": "Prevederile normativului I7-2011 se aplică la proiectarea, execuția și exploatarea instalațiilor electrice aferente:",
     "answers": [
         "Clădirilor prefabricate",
         "Minelor și carierelor",
@@ -1035,16 +1035,17 @@
     "correct": 1
 },
 {
-    "question": "Conform normativului 1-7-2011, protecția de bază reprezintă:",
+    "question": "Conform normativului I7-2011, protecția de bază reprezintă:",
     "answers": [
-        "Protecția împotriva atingerilor indirecte",
-        "Protecția împotriva stingerilor indirecte",
+        "Protecția împotriva șocurilor electrice în absența defectului",
+        "Protecția care corespunde protecției împotriva atingerilor directe",
         "Protecția împotriva șocurilor electrice în caz de defect"
+        
     ],
-    "correct": 0
+    "correct": 1
 },
 {
-    "question": "Conform normativului 1-7-2011, o coloană electrică este un circuit electric care:",
+    "question": "Conform normativului I7-2011, o coloană electrică este un circuit electric care:",
     "answers": [
         "Alimentează un tablou de distribuție",
         "Alimentează un receptor de putere",
@@ -1053,7 +1054,7 @@
     "correct": 0
 },
 {
-    "question": "Conform normativului 1-7-2011, o coloană electrică este un circuit electric care:",
+    "question": "Conform normativului I7-2011, o coloană electrică este un circuit electric care:",
     "answers": [
         "Alimentează mai multe surse de iluminat",
         "Alimentează un receptor de putere",
@@ -1073,23 +1074,23 @@
 {
     "question": "În cazul instalațiilor electrice de joasă tensiune, izolația de bază reprezintă:",
     "answers": [
-        "Izolația care asigură protecția de bază",
+        "Izolația care asigură protecția de defect",
         "Izolația părților active periculoase",
         "Izolația maselor"
     ],
     "correct": 1
 },
 {
-    "question": "Curentul de defect este definit în 1-7-2011 ca fiind:",
+    "question": "Curentul de defect este definit în I7-2011 ca fiind:",
     "answers": [
         "Un curent electric care circulă ca urmare a unei suprasarcini",
         "Un curent electric care circulă ca urmare a unui defect de izolație",
-        "Un curent electric care circulă trifazat ca urmare a unui scurtcircuit"
+        "Un curent electric care circulă ca urmare a unui scurtcircuit trifazat"
     ],
     "correct": 1
 },
 {
-    "question": "Conform normativului 1-7-2011, protecția în caz de defect reprezintă:",
+    "question": "Conform normativului I7-2011, protecția în caz de defect reprezintă:",
     "answers": [
         "O protecție împotriva șocurilor electrice în condiții de defect simplu",
         "O protecție împotriva șocurilor electrice în condiții de scurtcircuit",
@@ -1107,7 +1108,7 @@
     "correct": 2
 },
 {
-    "question": "Conform normativului 1-7-2011, alimentarea de securitate la un consumator este o alimentare prevăzută pentru menținerea în funcțiune a echipamentelor și instalațiilor electrice importante pentru:",
+    "question": "Conform normativului I7-2011, alimentarea de securitate la un consumator este o alimentare prevăzută pentru menținerea în funcțiune a echipamentelor și instalațiilor electrice importante pentru:",
     "answers": [
         "Sănătatea și securitatea persoanelor și a animalelor domestice",
         "Continuarea activității productive a principalelor instalații tehnologice ale consumatorului respectiv",
@@ -1149,7 +1150,7 @@
         "Cel mult 4 Ω",
         "Cel mult 10 Ω"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "La bateriile de condensatoare de joasă tensiune fracționabile cu trepte comutabile se prevăd dispozitive de descărcare:",
@@ -1167,7 +1168,7 @@
         "Se prevăd cu dispozitive speciale de descărcare",
         "Se prevăd cu dispozitive speciale de descărcare în anumite situații"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "În rețelele în care funcțiunile de conductor de protecție și de conductor neutru sunt îndeplinite de un singur conductor (PEN)",
@@ -1199,7 +1200,7 @@
 {
     "question": "Într-o rețea de tip TN, atunci când secțiunea conductorului neutru este mai mică decât cea a conductorului de fază,",
     "answers": [
-        "Este necesar să se prevadă o protecție de supracurent pe conductorul neutru",
+        "Este necesar să se prevadă o protecție de supracurent pe conductorul neutru, corespunzătoare secțiunii conductorului de fază",
         "Este necesar să se prevadă o protecție de supracurent pe conductorul neutru, corespunzătoare secțiunii acestui conductor",
         "Nu este necesar să se prevadă o protecție de supracurent pe conductorul neutru"
     ],
@@ -1208,9 +1209,9 @@
 {
     "question": "Protecția de supracurent prevăzută pe conductorul neutru trebuie să producă deconectarea:",
     "answers": [
-        "Conductorului de fază",
-        "Conductorului neutru, numai dacă este o rețea TT",
-        "Conductorului neutru, numai dacă este o rețea TN"
+        "Conductoarelor active",
+        "Conductorului neutru, numai dacă este o rețea IT",
+        "Conductorului neutru, numai dacă este o rețea TT"
     ],
     "correct": 1
 },
@@ -1224,13 +1225,13 @@
     "correct": 2
 },
 {
-    "question": "Conform prevederilor 17-2011, alegerea secțiunii conductoarelor și barelor din interiorul unui tablou este responsabilitatea:",
+    "question": "Conform prevederilor I7-2011, alegerea secțiunii conductoarelor și barelor din interiorul unui tablou este responsabilitatea:",
     "answers": [
         "Proiectantului instalației electrice",
         "Producătorului",
         "Verificatorului de proiect"
     ],
-    "correct": 0
+    "correct": 1
 },
 {
     "question": "Dacă de la orice punct al unei instalații funcțiile de conductor neutru (N) și de conductor de protecție (PE) sunt asigurate prin conductoare separate,",
@@ -1266,7 +1267,7 @@
         "Izolația părților active periculoase care asigură un grad de protecție împotriva șocurilor electrice, echivalent celui unei izolații duble",
         "Izolația independentă prevăzută suplimentar față de izolația de bază, pentru protecție în caz de defect"
     ],
-    "correct": 0
+    "correct": 1
 },
 {
     "question": "Utilizarea dispozitivelor de curent diferențial rezidual DDR reprezintă:",
@@ -1281,7 +1282,7 @@
     "question": "În cazul unei clădiri alimentate dintr-un post de transformare, între priza de pământ a clădirii și priza de pământ a postului de transformare trebuie să fie o distanță de:",
     "answers": [
         "Cel mult 1000 m",
-        "Cel puțin 70 m",
+        "Cel puțin 20 m",
         "Cel puțin 40 m"
     ],
     "correct": 1
@@ -1290,7 +1291,7 @@
     "question": "În cazul unei clădiri alimentate dintr-un post de transformare:",
     "answers": [
         "Se prevăd întotdeauna prize de pământ separate, la clădire și la postul de transformare",
-        "În anumite situații se prevede o priză de pământ comună cu rezistență de cel mult 10 Ω",
+        "În anumite situații se prevede o priză de pământ comună cu rezistență de cel mult 1 Ω",
         "În anumite situații se prevede o priză de pământ comună cu rezistență de cel mult 4 Ω"
     ],
     "correct": 1
@@ -1318,15 +1319,15 @@
     "answers": [
         "În construcție capsulată",
         "Cu contact de protecție",
-        "În execuție sau tunel"
+        "În execuție sub tencuială"
     ],
     "correct": 1
 },
 {
-    "question": "Conform 17/2011, conductor de protecție (PE) este:",
+    "question": "Conform I7/2011, conductor de protecție (PE):",
     "answers": [
-        "Un conductor prevăzut în liniile aeriene de joasă tensiune pentru protecția împotriva loviturilor de trăsnet",
-        "Un conductor prevăzut în scopuri de securitate, de exemplu protecția împotriva șocurilor electrice",
+        "Este un conductor prevăzut în liniile aeriene de joasă tensiune pentru protecția împotriva loviturilor de trăsnet",
+        "Este un conductor prevăzut în scopuri de securitate, de exemplu protecția împotriva șocurilor electrice",
         "Nu există conductor de protecție în instalațiile de joasă tensiune"
     ],
     "correct": 1
@@ -1335,19 +1336,19 @@
     "question": "Separarea de protecție este o separare între două circuite electrice prin intermediul:",
     "answers": [
         "Unei izolații de bază",
-        "Unei protecții electrice printr-un transformator",
+        "Unei protecții electrice printr-un ecran",
         "Unei izolații duble"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "Separarea de protecție este o separare între două circuite electrice prin intermediul:",
     "answers": [
         "Unei izolații întărite",
-        "Unei protecții electrice printr-un transformator",
+        "Unei protecții electrice printr-un ecran",
         "Unei izolații de bază"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "Legarea la pământ reprezintă realizarea unei legături electrice:",
@@ -1406,11 +1407,11 @@
 {
     "question": "Tipurile de rețele în funcție de modul de legare la pământ pentru tensiune alternativă sunt:",
     "answers": [
-        "TN, TT, IT",
+        "TI, TT, IT",
         "TN, TI, IT",
-        "TT, IT, TI"
+        "TN, TT, IT"
     ],
-    "correct": 1
+    "correct": 2
 },
 {
     "question": "Într-o rețea TN, punerea la masă a unei faze",
@@ -1424,7 +1425,7 @@
 {
     "question": "În toate rețelele TN, atunci când există un conductor PE sau PEN, acestea, când fac parte din componența tablourilor de distribuție",
     "answers": [
-        "Trebuie legate la pământ numai dacă rezistența de dispersie a rețelei de legare la pământ este 4 Ω",
+        "Trebuie legate la pământ numai dacă rezistența de dispersie a rețelei de legare la pământ este < 4 Ω",
         "Pot fi sau nu legate la pământ",
         "Trebuie legate la pământ obligatoriu"
     ],
@@ -1433,11 +1434,11 @@
 {
     "question": "Pe circuitele de alimentare ale dispozitivelor de stingere a incendiilor.",
     "answers": [
-        "Se recomandă să nu se prevadă protecția la suprasarcină",
         "Se recomandă să se prevadă protecția la suprasarcină",
+        "Se recomandă să nu se prevadă protecția la suprasarcină",
         "Este obligatoriu să se prevadă protecția la suprasarcină"
     ],
-    "correct": 2
+    "correct": 1
 },
 {
     "question": "Pe circuitele de alimentare ale dispozitivelor de stingere a incendiilor.",
@@ -1446,25 +1447,25 @@
         "Este obligatoriu să se prevadă protecția la scurtcircuit",
         "În norme nu sunt prevederi speciale pentru protecția la scurtcircuit a circuitelor de acest tip"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "Atunci când un dispozitiv de protecție trebuie să deconecteze toate conductoarele active din circuitul corespondent,",
     "answers": [
         "Conductorul neutru trebuie să fie deconectat înaintea conductoarelor de fază",
         "Conductorul neutru trebuie să fie deconectat simultan cu conductoarele de fază",
-        "Conductorul neutru nu trebuie să fie deconectat înaintea conductoarelor de fază"
+        "Conductorul neutru trebuie să nu fie deconectat înaintea conductoarelor de fază"
     ],
-    "correct": 1
+    "correct": 2
 },
 {
     "question": "În instalațiile electrice ale construcțiilor se utilizează oțelul sub formă de:",
     "answers": [
-        "Tuburi și țevi metalice",
+        "Conductoare neizolate rigide ( bare )",
         "Conductoare izolate",
         "Conductoare neizolate"
     ],
-    "correct": 2
+    "correct": 0
 },
 {
     "question": "Tuburile și țevile metalice",
@@ -1473,14 +1474,14 @@
         "Se pot monta direct pe elementele de construcție din materiale combustibile, condiționat",
         "Se pot monta direct pe elementele de construcție din materiale combustibile"
     ],
-    "correct": 1
+    "correct": 2
 },
 {
     "question": "Dozele de derivație se instalează",
     "answers": [
         "Numai pe suprafețele verticale ale elementelor de construcții",
         "Cu prioritate pe suprafețele verticale ale elementelor de construcții",
-        "Pe orice suprafață, indiferent de tipul dozei"
+        "Pe sau în pardoseală, indiferent de tipul dozei"
     ],
     "correct": 1
 },
@@ -1491,7 +1492,7 @@
         "Dar nu se va depăși 20% din puterea instalată a sursei",
         "Dar nu se va depăși 10% din puterea instalată a sursei"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "În fiecare instalație la nivelul tabloului general trebuie prevăzută",
@@ -1507,9 +1508,9 @@
     "answers": [
         "Trebuie să fie distincte de circuitele de prize",
         "Poate fi un circuit comun pentru iluminat normal și prize dacă puterea totală instalată pe circuit nu depășește 2 kW",
-        "Poate fi un circuit comun pentru iluminat normal și prize dacă puterea totală instalată pe circuit nu depășește 1 kW pe un circuit monofazat și 8 kW pe un circuit trifazat"
+        "Poate fi un circuit comun pentru iluminat normal și prize dacă puterea totală instalată pe circuit nu depășește 3 kW pe un circuit monofazat și 8 kW pe un circuit trifazat"
     ],
-    "correct": 2
+    "correct": 0
 },
 {
     "question": "Rezistența prizei de pământ a unei clădiri, atunci când este folosită numai pentru protecția împotriva șocurilor electrice, trebuie să fie cel mult",
@@ -1527,7 +1528,7 @@
         "4 Ω",
         "1 Ω"
     ],
-    "correct": 1
+    "correct": 2
 },
 {
     "question": "Rețeaua electrică a operatorului de transport/distribuție",
@@ -1536,7 +1537,7 @@
         "Constituie două surse de alimentare pentru locul de consum respectiv, dacă acesta este racordat printr-un post de transformare echipat cu două transformatoare și instalație de AAR",
         "Constituie o singură sursă de alimentare (SEN) pentru locul de consum respectiv, indiferent de numărul de instalații electrice prin care este racordat"
     ],
-    "correct": 1
+    "correct": 2
 },
 {
     "question": "Pe un circuit care alimentează mai multe receptoare electrice de putere de aceeași natură și destinație",
@@ -1545,7 +1546,7 @@
         "Nu se prevede protecție comună la suprasarcină",
         "Se prevede protecție la suprasarcină dacă puterea totală instalată a acestor receptoare depășește 16 kW"
     ],
-    "correct": 2
+    "correct": 1
 },
 {
     "question": "Rețeaua generală a conductoarelor principale de legare la pământ de protecție din instalațiile electrice pentru șantiere de construcții și de demolare",
@@ -1557,11 +1558,11 @@
     "correct": 0
 },
 {
-    "question": "Rețeaua generală de protecție din instalațiile electrice pentru șantiere de construcții și de demolare, care se execută ramificat, se leagă la toate capetele de linie și la punctele de ramificație la câte o priză de pământ",
+    "question": "Rețeaua generală de protecție din instalațiile electrice pentru șantiere de construcții și de demolare, care se execută ramificat, se leagă la toate capetele de linie și la punctele de ramificație la câte o priză de pământ fixă de ",
     "answers": [
-        "Cel mult 1 Ω",
         "1 Ω",
-        "4 Ω"
+        "4 Ω",
+        "10 Ω"
     ],
     "correct": 2
 },
@@ -1617,7 +1618,7 @@
         "1.5 ori curentul nominal al bateriei",
         "1.2 ori curentul nominal al bateriei"
     ],
-    "correct": 1
+    "correct": 2
 },
 {
     "question": "Conductorul neutru (N):",
@@ -1626,7 +1627,7 @@
         "Este un conductor conectat electric la punctul neutru al sursei și care contribuie la protecția contra atingerilor indirecte",
         "Este un conductor conectat electric la punctul neutru al sursei și care contribuie la distribuția energiei electrice și la protecția contra atingerilor indirecte"
     ],
-    "correct": 2
+    "correct": 0
 },
 {
     "question": "Protecția de bază (protecția împotriva atingerilor directe) se realizează:",
@@ -1668,10 +1669,19 @@
     "question": "Priza de pământ independentă este o priză de pământ",
     "answers": [
         "Care nu face parte dintr-o instalație de legare la pământ",
-        "Suficient de îndepărtată de alte prize de pământ pentru ca potențialul său electric să nu fie semnificativ afectat de curenții electrici între pământ și alte prize de pământ",
+        "Suficient de îndepărtată de alte prize de pământ pentru ca potențialul său electric să nu fie sensibil afectat de curenții electrici între pământ și alte prize de pământ",
         "Care nu face parte dintr-o rețea de prize de pământ"
     ],
     "correct": 1
+},
+{
+    "question": "Pentru realizarea prizelor de pământ se recomandă electrozi din:",
+    "answers": [
+        "Bare rotunde, țevi sau profil cruce",
+        "Conductele metalice pentru lichide inflamabile sau gaze",
+        "Obiectele metalice cufundate în apă"
+    ],
+    "correct": 0
 },
 {
     "question": "Priza de pământ este o",
@@ -1683,7 +1693,7 @@
     "correct": 2
 },
 {
-    "question": "Conform normativului 17-2011, prin Pământ de referință se înțelege",
+    "question": "Conform normativului I7-2011, prin Pământ de referință se înțelege",
     "answers": [
         "O parte a Pământului în contact electric cu o priză de pământ independentă",
         "O parte a Pământului în contact electric cu o instalație de legare la pământ",
@@ -1698,7 +1708,7 @@
         "Este o măsură tehnică principală pentru protecția în caz de defect (protecția la atingere indirectă)",
         "Este o măsură administrativă pentru protecția de bază (la atingere directă)"
     ],
-    "correct": 1
+    "correct": 0
 },
 {
     "question": "Scoaterea de sub tensiune a instalației la care se lucrează",
@@ -1714,12 +1724,12 @@
     "answers": [
         "20 kΩ",
         "30 kΩ",
-        "100 kΩ"
+        "50 kΩ"
     ],
     "correct": 2
 },
 {
-    "question": "Limitarea tensiunii de alimentare, care să nu depășească limitele TFI (conform recomandărilor din SR CEI/TS 61201)",
+    "question": "Limitarea tensiunii de alimentare, care să nu depășească limitele TFJ (conform recomandărilor din SR CEI/TS 61201)",
     "answers": [
         "Este o măsură tehnică pentru protecția de bază (la atingere directă)",
         "Este o măsură organizatorică pentru protecția de bază (la atingere directă)",
@@ -1782,12 +1792,12 @@
     "correct": 1
 },
 {
-    "question": "Rezistența de izolație a pardoselii și pereților în fiecare punct de măsurare în condițiile specificate în SR EN 61140 și verificate printr-o metodă recomandată în Anexa B.1 din 17/2011, dacă tensiunea nominală a instalației nu depășește 500 V în tensiune continuă sau alternativă, trebuie să fie mai mare de",
+    "question": "Rezistența de izolație a pardoselii și pereților în fiecare punct de măsurare în condițiile specificate în SR EN 61140 și verificate printr-o metodă recomandată în Anexa B.1 din I7/2011, dacă tensiunea nominală a instalației nu depășește 500 V în tensiune continuă sau alternativă, trebuie să fie mai mare de",
     "answers": [
         "75 kΩ",
         "50 kΩ",
         "100 kΩ"
     ],
-    "correct": 2
+    "correct": 1
 }
 ]
