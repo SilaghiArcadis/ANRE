@@ -204,7 +204,7 @@
       "Modificarea fără drept a componentelor instalațiilor energetice",
       "Sustragerea de energie electrică"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "question": "Constituie infracțiune:",
@@ -213,7 +213,7 @@
       "Modificarea fără drept a componentelor instalațiilor energetice",
       "Nerespectarea reglementărilor emise de ANRE"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "question": "Criteriile de promovare a energiei electrice produse în centrale electrice de cogenerare de înaltă eficiență au în vedere:",
@@ -690,7 +690,7 @@
       "Operatorului de transport și de sistem",
       "Unui operator de distribuție care deține în aproprierea locului de producere sau de consum o rețea electrică de distribuție"
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "question": "Avizul tehnic de racordare se emite de către:",
@@ -708,7 +708,7 @@
       "Având o putere electrică instalată de maximum 30 kW și la o tensiune nominală mai mică de 1 kV, numai dacă deține un atestat emis de ANRE",
       "Având o putere electrică instalată de maximum 10 kW și la o tensiune nominală mai mică de 1 kV, fără a deține un atestat emis de ANRE"
     ],
-    "correct": 2
+    "correct": 1
   },
   {
     "question": "La încetarea perioadei de valabilitate a contractului de furnizare a energiei electrice, clientul final de energie electrică are dreptul să primească de la furnizor decontul final de regularizare",
@@ -897,7 +897,7 @@
       "Numai în cazul clienților noncasnici mari",
       "Atunci când se constată înregistrarea eronată a consumului de energie electrică"
     ],
-    "correct": 0
+    "correct": 2
   },
   {
     "question": "Furnizorul are dreptul să recalculeze consumul de energie electrică pentru o perioadă anterioară",
@@ -906,7 +906,7 @@
       "Numai în cazul clienților noncasnici mari",
       "Numai în cazul în care contorul a fost defect"
     ],
-    "correct": 2
+    "correct": 0
   },
   {
     "question": "Clientul vulnerabil",
