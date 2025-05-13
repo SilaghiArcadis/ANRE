@@ -10,6 +10,7 @@ let chapter1Questions = [];
 let chapter2Questions = [];
 let chapter3Questions = [];
 let allQuestions = [];
+let currentQuizCategoryName = "Unknown Category"; // Initialize it
 
 
 // Utility function to pick distinct random elements from an array
@@ -50,10 +51,10 @@ fetch("questions.json")
     .catch(error => console.error('Error fetching questions:', error));
 
 
-    document.getElementById("chapter1-btn").addEventListener("click", () => startQuiz(chapter1FullData, "chapter1"));
-    document.getElementById("chapter2-btn").addEventListener("click", () => startQuiz(chapter2FullData, "chapter2"));
-    document.getElementById("chapter3-btn").addEventListener("click", () => startQuiz(chapter3FullData, "chapter3"));
-    document.getElementById("start-btn").addEventListener("click", () => startQuiz(allFullData, "all"));
+    document.getElementById("chapter1-btn").addEventListener("click", () => startQuiz(chapter1FullData, "Legislație"));
+document.getElementById("chapter2-btn").addEventListener("click", () => startQuiz(chapter2FullData, "Electrotehnică"));
+document.getElementById("chapter3-btn").addEventListener("click", () => startQuiz(chapter3FullData, "Norme tehnice"));
+document.getElementById("start-btn").addEventListener("click", () => startQuiz(allFullData, "Test final ANRE"));
     document.getElementById('history-button').addEventListener('click', function() {
         window.location.href = 'history.html'; // Navigate to history.html
     });
@@ -121,6 +122,7 @@ fetch("questions.json")
         timerInterval = setInterval(updateTimer, 1000);
         isAnswering = false;
         wrongAnswers = [];
+        currentQuizCategoryName = categoryName; // Store the category name
     
         document.getElementById("chapter1-btn").classList.add("hidden");
         document.getElementById("chapter2-btn").classList.add("hidden");
@@ -285,7 +287,7 @@ function showResults() {
     let success = correctCount >= 18;
 
     let quizData = {
-        category: getCategoryName(),
+        category: currentQuizCategoryName,
         success: success,
         correctCount: correctCount,
         wrongCount: wrongCount,
