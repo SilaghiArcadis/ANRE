@@ -74,7 +74,7 @@ document.getElementById("start-btn").addEventListener("click", () => startQuiz(a
     }
     
     function startQuiz(fullQuestionSet, categoryName) {
-        const numberOfQuestionsToPick = 30;
+        const numberOfQuestionsToPick = 25;
         const seenQuestionsKey = `seenQuestions_${categoryName}`;
         let seenQuestionIndices = JSON.parse(localStorage.getItem(seenQuestionsKey)) || [];
         let unseenQuestions = fullQuestionSet.filter((_, index) => !seenQuestionIndices.includes(index));
